@@ -1,4 +1,6 @@
-package Principal;
+package Interfaces;
+
+import Principal.Tienda;
 
 public interface IVendible 
 {
