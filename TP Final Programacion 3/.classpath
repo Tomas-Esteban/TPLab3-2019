@@ -6,7 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="/home/ivanmdq22/TPLab3-2019/TP Final Programacion 3/lib/java-json.jar"/>
-	<classpathentry kind="lib" path="/home/ivanmdq22/TPLab3-2019/TP Final Programacion 3/java-json.jar"/>
+	<classpathentry kind="lib" path="java-json.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

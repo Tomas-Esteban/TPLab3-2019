@@ -7,10 +7,10 @@ public class Usuario {
 	
 	
 	
-	public Usuario(String password, String nombre) {
-		super();
-		this.password = password;
+	public Usuario( String nombre,String password) {
 		this.nombre = nombre;
+		this.password = password;
+		
 	}
 	
 	public String getPassword() {
@@ -22,7 +22,7 @@ public class Usuario {
 	public String getNombre() {
 		return nombre;
 	}
-	public void setContrasena(String nombre) {
+	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 	

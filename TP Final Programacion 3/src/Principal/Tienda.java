@@ -8,10 +8,11 @@ public class Tienda {
 	
 	private HashMap<IVendible,Integer>mapaPrecios;
 	
+	
 	public Tienda() 
 	{
-		Heroe key = new Heroe();
-		mapaPrecios.put(key,1);
+		Heroe h1 = new Heroe();
+		mapaPrecios.put(h1,1);
 		getPrecioHeroe();
 		Torreta t1 = new Torreta();
 		mapaPrecios.put(t1,15);
