@@ -11,7 +11,7 @@ public class JsonUtil {
 
 		public static void grabar(JSONArray array) {
 			try {
-				FileWriter file = new FileWriter("test1.json");
+				FileWriter file = new FileWriter("Datos.json");
 				file.write(array.toString());
 				file.flush();
 				file.close();
@@ -26,7 +26,7 @@ public class JsonUtil {
 			String contenido = "";
 			try 
 			{
-				contenido = new String(Files.readAllBytes(Paths.get("test.json")));
+				contenido = new String(Files.readAllBytes(Paths.get("Datos.json")));
 			} 
 			catch (IOException e) 
 			{
