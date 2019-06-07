@@ -10,29 +10,9 @@ public class Castillo {
 	
 	private Muralla muralla;
 	private Tienda tienda;
-	private static int vidas = 5;
 	
-	
-	public Castillo(Muralla muralla, Tienda tienda) {
-	
-		this.muralla = muralla;
-		this.tienda = tienda;
+	public Castillo() {
+		
 	}
-	
-	
-	public Muralla getMuralla() {
-		return muralla;
-	}
-	public void setMuralla(Muralla muralla) {
-		this.muralla = muralla;
-	}
-	public Tienda getTienda() {
-		return tienda;
-	}
-	public void setTienda(Tienda tienda) {
-		this.tienda = tienda;
-	}
-	
-	
 	
 }

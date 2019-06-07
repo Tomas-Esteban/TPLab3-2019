@@ -7,8 +7,8 @@ public class Heroe extends Personaje implements IVendible
 	private boolean disponible;
 
 	
-	public Heroe(int posicion, double dps, double vdm, boolean disponible) {
-		super(posicion, dps, vdm);
+	public Heroe(int posicionX,int posicionY, double dps, double vdm, boolean disponible) {
+		super(posicionY, posicionX, dps, vdm);
 		this.disponible = disponible;
 	}
 	

@@ -10,8 +10,8 @@ public class Zombie extends Personaje{
 	private double oro;
 
 	
-	public Zombie(int posicion, double dps, double vdm, double oro) {
-		super(posicion, dps, vdm);
+	public Zombie(int posicionX, int posicionY, double dps, double vdm, double oro) {
+		super(posicionX,posicionY, dps, vdm);
 		this.oro = oro;
 	}
 	

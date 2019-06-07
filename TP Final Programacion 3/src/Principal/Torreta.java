@@ -10,31 +10,12 @@ import Interfaces.IVendible;
  * @param posicion
  */
 
-public class Torreta implements IVendible{
+public class Torreta extends Defensa implements IVendible{
 
-	private double hp;
-	private double dps;
-	private int posicion;
+	public  Torreta() {
 	
+	}
 	
-	public double getHp() {
-		return hp;
-	}
-	public void setHp(double hp) {
-		this.hp = hp;
-	}
-	public double getDps() {
-		return dps;
-	}
-	public void setDps(double dps) {
-		this.dps = dps;
-	}
-	public int getPosicion() {
-		return posicion;
-	}
-	public void setPosicion(int posicion) {
-		this.posicion = posicion;
-	}
 
 
 	@Override
