@@ -6,6 +6,9 @@ public class Heroe extends Personaje implements IVendible
 {
 	private boolean disponible;
 
+	public Heroe(float x, float y) {
+		
+	}
 	
 	public Heroe(int posicionX,int posicionY, double dps, double vdm, boolean disponible) {
 		super(posicionY, posicionX, dps, vdm);
@@ -27,13 +30,17 @@ public class Heroe extends Personaje implements IVendible
 	}
 
 
-
+	public void actualizar() {
+		
+	}
+	
 	@Override
 	public double getValor(Tienda tienda) {
 		// TODO Auto-generated method stub
 		return tienda.getPrecioHeroe();
 	}
 
+	
 	
 
 	

@@ -13,7 +13,7 @@ public class Main {
 		
 	}
 	
-	/// necesitamos un metodo para que comprar el texto del JTextField con el archivo 
+	
 	
 	
 	/**
@@ -25,6 +25,9 @@ public class Main {
 			System.out.println(arraye);
 			for(int i=0;i<arraye.length();i++) {
 				JSONObject jo = arraye.getJSONObject(i);
+				
+				/// necesitamos un metodo para que comprar el texto del JTextField con el archivo 
+				
 				if(jo.getString("nombre").equals(pideNombreUsuario()) && jo.getString("contrasena").equals(pideClaveUsuario())) {
 					// deja el JTextField en blanco vuelve a pedir que se llene el campo tira una pantalla de error!
 				}else {

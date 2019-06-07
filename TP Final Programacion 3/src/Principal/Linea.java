@@ -3,7 +3,7 @@ package Principal;
 import java.util.ArrayList;
 
 public class Linea {
-	
+	// clase generica con arreglo de colecciones
 	private ArrayList<Zombie>listaZombie;
 	private ArrayList<Torreta>listaTorreta;
 	private ArrayList<Aldea>listaAldeas;

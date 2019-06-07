@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <interface id="1" language="java" name="Interfaces.IVendible" project="TP Final Programacion 3" 
     file="/TP Final Programacion 3/src/Interfaces/IVendible.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="567" y="839"/>    
+    <position height="-1" width="-1" x="933" y="1044"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </interface>  
   <class id="2" language="java" name="Principal.Linea" project="TP Final Programacion 3" 
     file="/TP Final Programacion 3/src/Principal/Linea.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="748" y="275"/>    
+    <position height="-1" width="-1" x="769" y="449"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="Principal.Aldea" project="TP Final Programacion 3" 
     file="/TP Final Programacion 3/src/Principal/Aldea.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="238" y="540"/>    
+    <position height="-1" width="-1" x="909" y="790"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="Principal.Tienda" project="TP Final Programacion 3" 
     file="/TP Final Programacion 3/src/Principal/Tienda.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="169" width="232" x="870" y="736"/>    
+    <position height="-1" width="-1" x="366" y="1025"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </class>  
   <class id="5" language="java" name="Principal.Muralla" project="TP Final Programacion 3" 
     file="/TP Final Programacion 3/src/Principal/Muralla.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="97" width="85" x="1142" y="736"/>    
+    <position height="-1" width="-1" x="636" y="989"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,173 +48,216 @@
   </class>  
   <class id="6" language="java" name="Principal.Nivel" project="TP Final Programacion 3" 
     file="/TP Final Programacion 3/src/Principal/Nivel.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="88" y="160"/>    
+    <position height="-1" width="-1" x="258" y="139"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="Principal.Torreta" project="TP Final Programacion 3" 
+  <class id="7" language="java" name="Principal.Defensa" project="TP Final Programacion 3" 
+    file="/TP Final Programacion 3/src/Principal/Defensa.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1208" y="420"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="Principal.Torreta" project="TP Final Programacion 3" 
     file="/TP Final Programacion 3/src/Principal/Torreta.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="471" y="565"/>    
+    <position height="-1" width="-1" x="1111" y="764"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="Principal.JsonUtil" project="TP Final Programacion 3" 
+  <class id="9" language="java" name="Principal.JsonUtil" project="TP Final Programacion 3" 
     file="/TP Final Programacion 3/src/Principal/JsonUtil.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="233" y="176"/>    
+    <position height="-1" width="-1" x="412" y="157"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="Principal.Castillo" project="TP Final Programacion 3" 
+  <class id="10" language="java" name="Principal.Castillo" project="TP Final Programacion 3" 
     file="/TP Final Programacion 3/src/Principal/Castillo.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="169" width="140" x="1006" y="437"/>    
+    <position height="-1" width="-1" x="487" y="742"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="Principal.Personaje" project="TP Final Programacion 3" 
+  <class id="11" language="java" name="Principal.Personaje" project="TP Final Programacion 3" 
     file="/TP Final Programacion 3/src/Principal/Personaje.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1170" y="211"/>    
+    <position height="-1" width="-1" x="384" y="456"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="Principal.Zombie" project="TP Final Programacion 3" 
+  <class id="12" language="java" name="Principal.Zombie" project="TP Final Programacion 3" 
     file="/TP Final Programacion 3/src/Principal/Zombie.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="151" width="186" x="1186" y="437"/>    
+    <position height="-1" width="-1" x="297" y="778"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="Principal.Usuario" project="TP Final Programacion 3" 
+  <class id="13" language="java" name="Principal.Tablero" project="TP Final Programacion 3" 
+    file="/TP Final Programacion 3/src/Principal/Tablero.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1044" y="199"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="Principal.Main" project="TP Final Programacion 3" 
+    file="/TP Final Programacion 3/src/Principal/Main.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="603" y="184"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="Principal.Usuario" project="TP Final Programacion 3" 
     file="/TP Final Programacion 3/src/Principal/Usuario.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="422" y="214"/>    
+    <position height="-1" width="-1" x="796" y="193"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="Principal.Pincho" project="TP Final Programacion 3" 
+  <class id="16" language="java" name="Principal.Pincho" project="TP Final Programacion 3" 
     file="/TP Final Programacion 3/src/Principal/Pincho.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="259" width="141" x="599" y="437"/>    
+    <position height="-1" width="-1" x="1292" y="791"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="Principal.Heroe" project="TP Final Programacion 3" 
+  <class id="17" language="java" name="Principal.Heroe" project="TP Final Programacion 3" 
     file="/TP Final Programacion 3/src/Principal/Heroe.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="169" width="186" x="780" y="437"/>    
+    <position height="-1" width="-1" x="661" y="789"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="15">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="16" name="muralla"/>      
-      <multiplicity id="17" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="18">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <association id="19">    
+  <association id="18">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="20" name="heroe"/>      
-      <multiplicity id="21" minimum="0" maximum="1"/>    
+      <attribute id="19" name="castillo"/>      
+      <multiplicity id="20" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
+    <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="22">    
+  <association id="21">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="23" name="castillo"/>      
-      <multiplicity id="24" minimum="0" maximum="1"/>    
+      <attribute id="22" name="pincho"/>      
+      <multiplicity id="23" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
+    <end type="TARGET" refId="16" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="25">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <association id="26">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="27" name="tienda"/>      
-      <multiplicity id="28" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="29">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="30" name="pincho"/>      
-      <multiplicity id="31" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="32">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="33" name="listaZombie"/>      
-      <multiplicity id="34" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="35">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <generalization id="36">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="10"/>  
+  <generalization id="24">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="11"/>  
   </generalization>  
-  <association id="37">    
+  <association id="25">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="38" name="listaTorreta"/>      
-      <multiplicity id="39" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="40">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="10"/>  
-  </generalization>  
-  <realization id="41">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <association id="42">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="43" name="ListaAldeas"/>      
-      <multiplicity id="44" minimum="0" maximum="2147483647"/>    
+      <attribute id="26" name="listaAldeas"/>      
+      <multiplicity id="27" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <association id="28">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="29" name="tienda"/>      
+      <multiplicity id="30" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="31">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="32" name="listaLineas"/>      
+      <multiplicity id="33" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="34">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="35" name="listaTorreta"/>      
+      <multiplicity id="36" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="37">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <realization id="38">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <association id="39">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="40" name="listaZombie"/>      
+      <multiplicity id="41" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="42">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="43" name="heroe"/>      
+      <multiplicity id="44" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="45">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <realization id="46">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <generalization id="47">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <generalization id="48">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <association id="49">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="50" name="muralla"/>      
+      <multiplicity id="51" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="52">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
