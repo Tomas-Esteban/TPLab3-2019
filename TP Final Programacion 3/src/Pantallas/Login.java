@@ -16,9 +16,10 @@ public class Login extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField nombreUsuario;
+	private JTextField contrasenaUsuario;
 
 	/**
 	 * Launch the application.
@@ -41,6 +42,7 @@ public class Login extends JFrame {
 	 * Create the frame.
 	 */
 	public Login() {
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -48,23 +50,27 @@ public class Login extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("New button");
+		JButton btnNewButton = new JButton("Aceptar");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				// ver como meter metodo aca adentro
+				nombreUsuario.getText();
+				contrasenaUsuario.getText();
 			}
 		});
 		btnNewButton.setBounds(175, 175, 114, 25);
 		contentPane.add(btnNewButton);
 		
-		textField = new JTextField();
-		textField.setBounds(175, 81, 124, 19);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		nombreUsuario = new JTextField();
+		nombreUsuario.setBounds(175, 81, 124, 19);
+		contentPane.add(nombreUsuario);
+		nombreUsuario.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(175, 106, 124, 19);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		contrasenaUsuario = new JTextField();
+		contrasenaUsuario.setBounds(175, 106, 124, 19);
+		contentPane.add(contrasenaUsuario);
+		contrasenaUsuario.setColumns(10);
+		
+		
 	}
 }
