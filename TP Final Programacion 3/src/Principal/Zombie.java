@@ -1,8 +1,16 @@
 package Principal;
 
 
-/** 
- * la clase zombie va a tener una cantida de oro que da por su muerte
+ /** 
+ * 
+ * @author ivanmdq22
+ * @author Pardo
+ * @author Nazuti.
+ * @since 10/05/2019
+ * 
+ * la clase zombie es una clase hija que extiende de Personaje va a tener una cantida de oro que da por su muerte.
+ * @see {@link Personaje}
+ * @param oro.
  */
 
 public class Zombie extends Personaje{

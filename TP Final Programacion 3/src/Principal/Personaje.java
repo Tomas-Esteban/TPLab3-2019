@@ -1,13 +1,25 @@
 package Principal;
 
+/** 
+ * 
+ * @author ivanmdq22
+ * @author Pardo
+ * @author Nazuti.
+ * @since 10/05/2019
+ * @version 1.6
+ * 
+ * La clase personaje va a tener vida (o hp), 
+ * una posicion en el mapa (x,y), su daño (o dps) y su velocidad de movimiento (o vdm).
+ *
+ * @param posicionX
+ * @param posicionY
+ * @param dps
+ * @param vdm
+ * 
+ */
 public class Personaje {
 	
-	/** La clase personaje va a tener vida (o hp), una posicion en el mapa, su daño (o dps) y su velocidad de movimiento (o vdm)
-	 *
-	 * @param posicion
-	 * @param dps
-	 * @param vdm
-	 */
+	
 	
 	private static double hp = 100;
 	private int posicionX;

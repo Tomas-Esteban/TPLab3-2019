@@ -1,5 +1,20 @@
 package Principal;
 
+/** 
+ * 
+ * @author ivanmdq22
+ * @author Pardo
+ * @author Nazuti.
+ * @since 10/05/2019
+ * @version 1.6
+ * 
+ * Clase padre de Torreta, Pinchos.
+ * @param atributo vida.
+ * @param atributo dano por seg.
+ * @param posicion x,y.
+ *  
+ */
+
 public class Defensa {
 	
 	private double hp;

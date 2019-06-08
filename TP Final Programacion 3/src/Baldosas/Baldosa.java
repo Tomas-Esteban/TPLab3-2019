@@ -9,8 +9,22 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 /**
- *
+ * 
+ * @author ivanmdq22
  * @author Pardo
+ * @author Nazuti.
+ * @since 10/05/2019
+ * @version 1.6
+ * 
+ * Clase que se encarga de setear las "baldosas" (piso,tablero,etc) para su uso en la interfaz grafica
+ * @param arreglo de baldosas
+ * @param objeto cesped oscuro
+ * @param objeto cesced oscuro superior
+ * @param objeto cesced oscuro inferior
+ * 
+ * @param ancho y alto de las baldosas
+ * @param textura
+ * @param id
  */
 public class Baldosa{
     
@@ -22,7 +36,6 @@ public class Baldosa{
     
     public static final int ANCHO_BALDOSA = 32, ALTO_BALDOSA = 32;
     
-    //Clase
     
     protected BufferedImage textura;
     protected final int id;

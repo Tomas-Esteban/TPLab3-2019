@@ -5,9 +5,19 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 
 /**
- *
+ * 
+ * @author ivanmdq22
  * @author Pardo
+ * @author Nazuti.
+ * @since 10/05/2019
+ * @version 1.6
+ * 
+ * Clase de la interfaz grafica Swing, pantalla principal.
+ * <br> Tutorial sobre <strong> Swing en Eclipse </strong> </br>
+ * @see {@link https://www.youtube.com/playlist?list=PLMQ4k-hUWGNmQwP3u5HP894NnQQ9lGY_d}
+ * 
  */
+
 public class Pantalla {
     
     private JFrame ventana;
@@ -26,7 +36,7 @@ public class Pantalla {
         
     }
     
-    private void crearVentana(){
+    public void crearVentana(){
         
         ventana = new JFrame(titulo);
         ventana.setSize(ancho, alto);

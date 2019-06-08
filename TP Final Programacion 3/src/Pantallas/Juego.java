@@ -5,9 +5,9 @@
  */
 package Pantallas;
 
-import Estado.Estado;
-import Estado.EstadoJuego;
-import Estado.EstadoMenu;
+import Estado.Tablero;
+import Estado.TableroJuego;
+import Estado.TableroMenu;
 import Graficos.CargadorImagen;
 import Graficos.HojaSprites;
 import Graficos.Recurso;
@@ -19,15 +19,30 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * 
+ * @author ivanmdq22
  * @author Pardo
+ * @author Nazuti.
+ * @since 10/05/2019
+ * @version 1.6
+ * 
+ * Clase que se encarga de crear un objeto juego implementa la interfaz runnable para utilizar hilos
+ * @param objeto pantalla
+ * @param ancho y largo de pantalla
+ * @param boolean de ejecucion
+ * @param hilo
+ * @param imagenes de sprites y hoja de sprites
+ * @param objeto estado del juego
+ * @param objeto estado del menu
+ * 
  */
+
 public class Juego implements Runnable {
     
     
     public Pantalla ventana;
     public int ancho, alto;
-    String titulo;
+    private String titulo;
     
     private boolean enEjecucion = false;
     private Thread hilo;
@@ -40,8 +55,8 @@ public class Juego implements Runnable {
     private HojaSprites hoja;
     
     //Estados
-    private Estado estadoJuego;
-    private Estado estadoMenu;
+    private Tablero estadoJuego;
+    private Tablero estadoMenu;
     
     public Juego(String titulo, int ancho, int alto){
         
@@ -49,7 +64,6 @@ public class Juego implements Runnable {
         this.alto = alto;
         this.titulo = titulo;
       
-        
     }
     
     public void run(){
@@ -94,17 +108,17 @@ public class Juego implements Runnable {
           ventana = new Pantalla(titulo, ancho, alto);
           Recurso.inicializar();
           
-          estadoJuego = new EstadoJuego(this);
-          estadoMenu = new EstadoMenu(this);
+          estadoJuego = new TableroJuego(this);
+          estadoMenu = new TableroMenu(this);
           
-          Estado.setEstado(estadoJuego);
+          Tablero.setEstado(estadoJuego);
         // test = CargadorImagen.cargarImagen("/recursos/texturas/bg.png");
          // hoja = new HojaSprites(test);
     }
     
     private void actualizar(){
-        if(Estado.getEstado() != null)
-            Estado.getEstado().actualizar();
+        if(Tablero.getEstado() != null)
+            Tablero.getEstado().actualizar();
     }
     
     private void renderizar(){
@@ -120,8 +134,8 @@ public class Juego implements Runnable {
         g.clearRect(0, 0, ancho, alto);
         //dIBUJAR
         
-        if(Estado.getEstado() != null)
-            Estado.getEstado().renderizar(g);
+        if(Tablero.getEstado() != null)
+            Tablero.getEstado().renderizar(g);
         //g.drawImage(Recurso.cespedOscuro, 10, 10, null);
 
         //g.drawImage(test, 0, 0, null);
@@ -132,6 +146,9 @@ public class Juego implements Runnable {
         g.dispose();
     }
     
+    /**
+     * Si la ejecucuon ya esta en ejecucion no te deja incializar el juego. 
+     */
     public synchronized void iniciar(){
         
         if(enEjecucion == true)
@@ -141,7 +158,9 @@ public class Juego implements Runnable {
         hilo = new Thread(this);
         hilo.start();
     }
-    
+    /**
+     * Si la ejecucion no esta en ejecucion crea un hilo de ejecucion. 
+     */
     public synchronized void detener(){
         
         if(enEjecucion == false)

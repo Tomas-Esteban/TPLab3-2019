@@ -9,9 +9,16 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-/**
- *
+ /** 
+ * 
+ * @author ivanmdq22
  * @author Pardo
+ * @author Nazuti.
+ * @since 10/05/2019
+ * 
+ * Clase auxiliar para cargar informacion desde un archivo hacia la clase CargarImagen.
+ * @see {@link CargadorImagen}
+ * 
  */
 public class Utilidad {
     

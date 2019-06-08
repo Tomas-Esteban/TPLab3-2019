@@ -2,6 +2,19 @@ package Principal;
 
 import Interfaces.IVendible;
 
+/** 
+ * 
+ * @author ivanmdq22
+ * @author Pardo
+ * @author Nazuti.
+ * @since 10/05/2019
+ * @version 1.6
+ * 
+ * Clase hija de Personaje.
+ * @see {@link Personaje}
+ *  
+ */
+
 public class Heroe extends Personaje implements IVendible
 {
 	private boolean disponible;

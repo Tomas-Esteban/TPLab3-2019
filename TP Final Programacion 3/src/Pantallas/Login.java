@@ -1,6 +1,9 @@
 package Pantallas;
 
+import java.awt.Canvas;
+import java.awt.Dimension;
 import java.awt.EventQueue;
+import java.awt.Window;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -10,44 +13,34 @@ import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Login extends JFrame {
+/**
+ * 
+ * @author ivanmdq22
+ * @author Pardo
+ * @author Nazuti.
+ * @since 10/05/2019
+ * @version 1.6
+ * 
+ * Clase de la interfaz grafica Swing que se encarga de crear un login del juego.
+ * <br> Tutorial sobre <strong> Swing en Eclipse </strong> </br>
+ * @see {@link https://www.youtube.com/playlist?list=PLMQ4k-hUWGNmQwP3u5HP894NnQQ9lGY_d}
+ * 
+ */
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	
+public class Login {
+
+	private Pantalla pantalla;
 	private JPanel contentPane;
 	private JTextField nombreUsuario;
 	private JTextField contrasenaUsuario;
+    
+    
 
-	/**
-	 * Launch the application.
-	 */
-	
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Login frame = new Login();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
 	public Login() {
 		
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		pantalla.crearVentana();
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("Aceptar");

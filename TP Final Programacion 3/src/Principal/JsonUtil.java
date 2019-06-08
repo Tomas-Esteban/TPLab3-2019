@@ -7,6 +7,18 @@ import java.nio.file.Paths;
 
 import org.json.JSONArray;
 
+/** 
+ * 
+ * @author ivanmdq22
+ * @author Pardo
+ * @author Nazuti.
+ * @since 10/05/2019
+ * @version 1.6
+ * 
+ * Clase para grabar un arreglo de objetos Json en un Archivo
+ *  
+ */
+
 public class JsonUtil {
 
 		public static void grabar(JSONArray array) {

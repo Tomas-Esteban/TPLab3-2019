@@ -8,9 +8,19 @@ package Graficos;
 import java.awt.image.BufferedImage;
 
 /**
- *
+ * 
+ * @author ivanmdq22
  * @author Pardo
+ * @author Nazuti.
+ * @since 10/05/2019
+ * @version 1.6
+ * 
+ * Clase que inicializa todas las imagenes de la interfaz grafica.
+ * @param ancho y alto
+ * @param imagen jugador,cespedOscuroInferior, cespedOscuroSuperior, muralla, cespedOscuro.
+ * 
  */
+
 public class Recurso {
     
     private static final int ancho = 32, alto = 32;

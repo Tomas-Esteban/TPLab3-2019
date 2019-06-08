@@ -10,13 +10,25 @@ import Utilidades.Utilidad;
 import java.awt.Graphics;
 
 /**
- *
+ * 
+ * @author ivanmdq22
  * @author Pardo
+ * @author Nazuti.
+ * @since 10/05/2019
+ * @version 1.6
+ * 
+ * Clase que permite crear un objeto Escenario.
+ * @param alto y ancho.
+ * @param posicion x, y.
+ * @param arreglo doble de baldosas.
+ * 
  */
+
 public class Escenario {
-    private int ancho, alto;
+    
+	private int ancho, alto;
     private int posicionX, posicionY;
-    private int[][] multiBaldosas;
+    private int [][] multiBaldosas;
     
     public Escenario(String ruta){
         
