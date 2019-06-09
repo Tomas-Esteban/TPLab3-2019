@@ -22,11 +22,11 @@ public class Ejecutor {
     /**
      * @param args the command line arguments
      */
+	
     public static void main(String[] args) {
         
         Juego juego = new Juego("Towerdeefense", 800, 600);
         juego.iniciar();
-        
         
     }
     

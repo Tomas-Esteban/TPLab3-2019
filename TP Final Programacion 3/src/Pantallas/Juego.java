@@ -27,6 +27,8 @@ import java.util.logging.Logger;
  * @version 1.6
  * 
  * Clase que se encarga de crear un objeto juego implementa la interfaz runnable para utilizar hilos
+ * @see <a href = "https://www.youtube.com/watch?v=qXhc4wbDaqU&t=186s" /> Hilos en Java </a>
+ * 
  * @param objeto pantalla
  * @param ancho y largo de pantalla
  * @param boolean de ejecucion

@@ -23,7 +23,7 @@ import java.awt.event.ActionEvent;
  * 
  * Clase de la interfaz grafica Swing que se encarga de crear un login del juego.
  * <br> Tutorial sobre <strong> Swing en Eclipse </strong> </br>
- * @see {@link https://www.youtube.com/playlist?list=PLMQ4k-hUWGNmQwP3u5HP894NnQQ9lGY_d}
+ * @see <a href="https://www.youtube.com/playlist?list=PLMQ4k-hUWGNmQwP3u5HP894NnQQ9lGY_d" /> Swing Eclipse </a>
  * 
  */
 

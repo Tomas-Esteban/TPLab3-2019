@@ -14,7 +14,7 @@ import Interfaces.IVendible;
  * La aldea va a tener una cantidad producida de oro por segundo (oroPorSegundo)
  * y un estado, si esta vivo produce el oro (vivo).
  * 
- * @see {@link Ivendible} 
+ * @see Interfaces.IVendible; 
  * @param oroPorSegundo
  * @param vivo
  * 

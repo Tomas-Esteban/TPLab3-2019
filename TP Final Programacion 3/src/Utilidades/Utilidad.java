@@ -17,7 +17,9 @@ import java.io.IOException;
  * @since 10/05/2019
  * 
  * Clase auxiliar para cargar informacion desde un archivo hacia la clase CargarImagen.
- * @see {@link CargadorImagen}
+ * <br> Presentacion Archivos by @author Benoffi7 </br>
+ * @see <a href = "@see <a href = "https://docs.google.com/presentation/d/1ZERtYDPQC76gweYqYi8X2dWs3T8JNzI79QX2j8ZRY5I/edit#slide=id.p1" /> Introduccion a JSon - PowerPoint </a>" /> Introduccion a Archivos - PowerPoint </a>
+ * @see Graficos.CargadorImagen;
  * 
  */
 public class Utilidad {

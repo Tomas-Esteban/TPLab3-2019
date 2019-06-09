@@ -26,8 +26,9 @@ import java.util.ArrayList;
  * @version 1.6
  * 
  * Clase Hija de Tablero que permite al programador saber en que situacion se encuentra el juego. 
- * <br> Presentacion sobre pilares de la POO @author Benoffi7 </br>
- * @see {@link https://docs.google.com/presentation/d/1ln1p_6b44mKaHEJkfdimSZrOWz9hK5vg1FegjWzlkkg/edit#slide=id.g348419c47f_0_282}
+ * <br> Presentacion sobre pilares de la POO by @author Benoffi7 </br>
+ * @see <a href = "https://docs.google.com/presentation/d/1ln1p_6b44mKaHEJkfdimSZrOWz9hK5vg1FegjWzlkkg/edit#slide=id.g348419c47f_0_282" /> Herenecia en Java - PowerPoint</a> 
+ * @see  Estado.Tablero;
  * @param objeto Heroe.
  * @param objeto Escenario.
  * @param lista zombie, torreta, aldea.

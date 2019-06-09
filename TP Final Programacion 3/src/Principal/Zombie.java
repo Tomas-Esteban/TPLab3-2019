@@ -9,7 +9,9 @@ package Principal;
  * @since 10/05/2019
  * 
  * la clase zombie es una clase hija que extiende de Personaje va a tener una cantida de oro que da por su muerte.
- * @see {@link Personaje}
+ * <br> Presentacion sobre pilares de la POO by @author Benoffi7 </br>
+ * @see <a href = "https://docs.google.com/presentation/d/1ln1p_6b44mKaHEJkfdimSZrOWz9hK5vg1FegjWzlkkg/edit#slide=id.g348419c47f_0_282" /> Herencia en Java - PowerPoint </a>
+ * @see Principal.Personaje;
  * @param oro.
  */
 

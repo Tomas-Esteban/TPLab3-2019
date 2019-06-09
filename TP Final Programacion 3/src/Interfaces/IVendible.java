@@ -11,7 +11,8 @@ import Principal.Tienda;
  * @version 1.6
  * 
  * Interfaz que devuele el valor en tienda de un objeto de la tienda
- * @see {@link https://docs.google.com/presentation/d/1uhn4eRUp3y4PFa8ohLqPOt316mDSvsGMtaPeQzy1TlE/edit#slide=id.p2 by @author Benoffi7}
+ * <br> <strong>Interfaces</strong> by @author Benoffi7 </br>
+ * @see <a href = "https://docs.google.com/presentation/d/1uhn4eRUp3y4PFa8ohLqPOt316mDSvsGMtaPeQzy1TlE/edit#slide=id.p2" /> Interfaces en java - PowerPoint </a>
  * 
  */
 

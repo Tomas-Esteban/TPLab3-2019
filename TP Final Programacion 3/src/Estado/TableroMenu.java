@@ -17,9 +17,11 @@ import java.awt.Graphics;
  * @version 1.6
  * 
  * Clase Hija de Estado que permite al programador saber en que situacion se encuentra el menu del juego. 
- * <br> Presentacion sobre pilares de la POO @author Benoffi7 </br>
- * @see {@link https://docs.google.com/presentation/d/1ln1p_6b44mKaHEJkfdimSZrOWz9hK5vg1FegjWzlkkg/edit#slide=id.g348419c47f_0_282}
+ * <br> Presentacion sobre pilares de la POO by @author Benoffi7 </br>
+ * @see <a href = "https://docs.google.com/presentation/d/1ln1p_6b44mKaHEJkfdimSZrOWz9hK5vg1FegjWzlkkg/edit#slide=id.g348419c47f_0_282" /> Herencia en Java - PowerPoint </a>
+ * @see  Estado.Tablero;
  * @param objeto estatico que indica el estado actual de la partida.
+ * 
  * 
  */
 public class TableroMenu extends Tablero {

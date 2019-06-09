@@ -17,6 +17,7 @@ import java.awt.image.BufferedImage;
  * @version 1.6
  * 
  * Clase que se encarga de setear las "baldosas" (piso,tablero,etc) para su uso en la interfaz grafica
+ * 
  * @param arreglo de baldosas
  * @param objeto cesped oscuro
  * @param objeto cesced oscuro superior
@@ -25,7 +26,9 @@ import java.awt.image.BufferedImage;
  * @param ancho y alto de las baldosas
  * @param textura
  * @param id
+ * 
  */
+
 public class Baldosa{
     
     //Staticas

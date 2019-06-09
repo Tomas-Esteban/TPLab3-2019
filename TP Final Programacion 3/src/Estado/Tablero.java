@@ -17,8 +17,8 @@ import java.awt.Graphics;
  * @version 1.6
  * 
  * Clase abstract Tablero que permite al programador saber en que situacion se encuentra la partida. 
- * <br> Informacion sobre clases Abstractas </br>
- * @see {@link https://docs.google.com/presentation/d/1ukZdfxZRe_mO6xIykQPGs_bfKZjjB-H4Ynvq028qppA/edit#slide=id.p19}
+ * <br> Informacion sobre clases <strong> Abstractas </strong> by @author Benoffi7 </br>
+ * @see <a href="https://docs.google.com/presentation/d/1ukZdfxZRe_mO6xIykQPGs_bfKZjjB-H4Ynvq028qppA/edit#slide=id.p19" /> Clases y Metodos Abstractos - PowerPoint </a>
  * @param objeto estatico que indica el estado actual de la partida.
  * 
  */

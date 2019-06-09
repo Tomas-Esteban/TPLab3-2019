@@ -14,7 +14,7 @@ import javax.swing.JFrame;
  * 
  * Clase de la interfaz grafica Swing, pantalla principal.
  * <br> Tutorial sobre <strong> Swing en Eclipse </strong> </br>
- * @see {@link https://www.youtube.com/playlist?list=PLMQ4k-hUWGNmQwP3u5HP894NnQQ9lGY_d}
+ * @see <a href="https://www.youtube.com/playlist?list=PLMQ4k-hUWGNmQwP3u5HP894NnQQ9lGY_d" /> Swing Eclipse </a>
  * 
  */
 
