@@ -25,9 +25,13 @@ public class Ejecutor {
 	
     public static void main(String[] args) {
         
-        Juego juego = new Juego("Towerdeefense", 800, 600);
-        juego.iniciar();
+        //Juego juego = new Juego("Towerdeefense", 800, 600);
+        //juego.iniciar();
         
+        //Login l1 = new Login();
+       
     }
+    
+   
     
 }

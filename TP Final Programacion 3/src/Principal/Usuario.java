@@ -4,6 +4,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import Pantallas.Login;
+
 
  /** 
  * 
@@ -49,46 +51,34 @@ public class Usuario {
 	/**
 	 * metodo que se encarga de saber si un usuario ya esta en el archivo o no.
 	 */
-	public void comprobarUsuario() {
-		try {
-			JSONArray arraye = new JSONArray(JsonUtil.leer());
-			System.out.println(arraye);
-			for(int i=0;i<arraye.length();i++) {
-				JSONObject jo = arraye.getJSONObject(i);
-				
-				/// necesitamos un metodo para que comprar el texto del JTextField con el archivo 
-				
-				if(jo.getString("nombre").equals(pideNombreUsuario()) && jo.getString("contrasena").equals(pideClaveUsuario())) {
-					// deja el JTextField en blanco vuelve a pedir que se llene el campo tira una pantalla de error!
-				}else {
-					// entra en la pantalla de seleccionar nivel
-				}
-			}
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-	}
 	
 	/**
 	* Metodo que obtiene el nombre del usuario de un TextField.
 	* @return retorna los datos pasados por teclado.
 	*/
-	
-	public String pideNombreUsuario() {
-		return "";
+	/*
+	 
+	 
+	public String pideNombreUsuario(String nombre) {
+		return nombre;
 	}
+	
+	*/
 	/**
 	* Metodo que obtiene la contrasena del usuario de un TextField.
 	* @return retorna los datos pasados por teclado.
 	*/
-	public String pideClaveUsuario() {
-		return "";
+	
+	/*
+	public String pideClaveUsuario(String pass) {
+		return pass;
 	}
+	*/
 	
 	/**
 	* metodo que se encarga de crear un usuario corroborando que el usuario no este creado.
 	*/
-	
+	/*
 	public void CrearUsuario() {
 		
 		// buscar la forma de tomar los datos de la pantalla 
@@ -110,5 +100,5 @@ public class Usuario {
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
-	}
+	}*/
 }

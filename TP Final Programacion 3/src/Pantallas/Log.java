@@ -1,6 +1,14 @@
 package Pantallas;
 
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 import org.json.JSONArray;
@@ -8,49 +16,46 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import Principal.JsonUtil;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
-/**
- * 
- * @author ivanmdq22
- * @author Pardo
- * @author Nazuti.
- * @since 10/05/2019
- * @version 1.6
- * 
- * Clase de la interfaz grafica Swing que se encarga de crear un login del juego.
- * <br> Tutorial sobre <strong> Swing en Eclipse </strong> </br>
- * @see <a href="https://www.youtube.com/playlist?list=PLMQ4k-hUWGNmQwP3u5HP894NnQQ9lGY_d" /> Swing Eclipse </a>
- * 
- */
+public class Log {
 
-public class Login extends JFrame{
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	
-	
+	private JFrame frame;
 	private JPanel contentPane;
 	private JTextField nombreUsuario;
 	private JTextField contrasenaUsuario;
-    
-	
-    
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Log window = new Log();
+					window.frame.setVisible(true);
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 
+	/**
+	 * Create the application.
+	 */
+	public Log() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
 		
-	public Login() {
-		
+		frame = new JFrame();
 		
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("Aceptar");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -58,8 +63,9 @@ public class Login extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				if(comprobarUsuario()==true) {
 					
-					SeleccionNivel s1 = new SeleccionNivel();
-					JOptionPane.showMessageDialog(s1,"Bienvenido");
+					SelNivel d1 = new SelNivel();
+					//JOptionPane.showMessageDialog(d1,"Bienvenido");
+					
 					
 				}else {
 					
@@ -78,8 +84,10 @@ public class Login extends JFrame{
 			}
 		});
 		
-		
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		btnNewButton.setBounds(175, 175, 114, 25);
+		contentPane.setLayout(null);
 		contentPane.add(btnNewButton);
 		
 		nombreUsuario = new JTextField();
@@ -91,10 +99,8 @@ public class Login extends JFrame{
 		contrasenaUsuario.setBounds(175, 106, 124, 19);
 		contentPane.add(contrasenaUsuario);
 		contrasenaUsuario.setColumns(10);
-		
-		
-	}
 	
+	}
 	public String pideNombreUsuario() {
 		return nombreUsuario.getText();
 	}
@@ -119,9 +125,9 @@ public class Login extends JFrame{
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
-		return rootPaneCheckingEnabled;
+		return false;
+		
 		
 	}
-	
-	
+
 }
