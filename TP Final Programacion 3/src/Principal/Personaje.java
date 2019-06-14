@@ -1,5 +1,9 @@
 package Principal;
 
+import java.awt.Graphics;
+
+import Interfaces.IAcciones;
+
 /** 
  * 
  * @author ivanmdq22
@@ -17,7 +21,7 @@ package Principal;
  * @param vdm
  * 
  */
-public class Personaje {
+public class Personaje implements IAcciones {
 	
 	
 	
@@ -70,6 +74,18 @@ public class Personaje {
 	}
 	public void setVdm(double vdm) {
 		this.vdm = vdm;
+	}
+
+	@Override
+	public void actualizar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void renderizar(Graphics g) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

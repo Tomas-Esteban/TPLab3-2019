@@ -13,8 +13,8 @@ import Interfaces.IVendible;
  * Clase hija de Personaje.
  * * <br> Presentacion sobre pilares de la POO by @author Benoffi7 </br>
  * @see <a href = "https://docs.google.com/presentation/d/1ln1p_6b44mKaHEJkfdimSZrOWz9hK5vg1FegjWzlkkg/edit#slide=id.g348419c47f_0_282" /> Herencia en Java - PowerPoint </a>
- * @see Interfaces.IVendible;
- * @see Principal.Personaje;
+ * @see Interfaces.IVendible
+ * @see Principal.Personaje
  *  
  */
 
@@ -45,16 +45,14 @@ public class Heroe extends Personaje implements IVendible
 		this.disponible = disponible;
 	}
 
-
-	public void actualizar() {
-		
-	}
 	
 	@Override
 	public double getValor(Tienda tienda) {
 		// TODO Auto-generated method stub
 		return tienda.getPrecioHeroe();
 	}
+
+
 
 	
 	

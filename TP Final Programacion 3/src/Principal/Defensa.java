@@ -1,5 +1,9 @@
 package Principal;
 
+import java.awt.Graphics;
+
+import Interfaces.IAcciones;
+
 /** 
  * 
  * @author ivanmdq22
@@ -17,7 +21,7 @@ package Principal;
  *  
  */
 
-public class Defensa {
+public class Defensa implements IAcciones{
 	
 	private double hp;
 	private double dps;
@@ -48,6 +52,16 @@ public class Defensa {
 	}
 	public void setPosicionY(int posicionY) {
 		this.posicionY = posicionY;
+	}
+	@Override
+	public void actualizar() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void renderizar(Graphics g) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

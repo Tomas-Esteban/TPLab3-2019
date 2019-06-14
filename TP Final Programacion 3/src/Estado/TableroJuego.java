@@ -13,9 +13,10 @@ import Principal.Tienda;
 import Principal.Torreta;
 import Principal.Zombie;
 import Escenario.Escenario;
+import Generica.Contenedor;
+import Interfaces.IAcciones;
 import Pantallas.Juego;
 import java.awt.Graphics;
-import java.util.ArrayList;
 
 /**
  * 
@@ -28,7 +29,7 @@ import java.util.ArrayList;
  * Clase Hija de Tablero que permite al programador saber en que situacion se encuentra el juego. 
  * <br> Presentacion sobre pilares de la POO by @author Benoffi7 </br>
  * @see <a href = "https://docs.google.com/presentation/d/1ln1p_6b44mKaHEJkfdimSZrOWz9hK5vg1FegjWzlkkg/edit#slide=id.g348419c47f_0_282" /> Herenecia en Java - PowerPoint</a> 
- * @see  Estado.Tablero;
+ * @see  Estado.Tablero
  * @param objeto Heroe.
  * @param objeto Escenario.
  * @param lista zombie, torreta, aldea.
@@ -36,15 +37,17 @@ import java.util.ArrayList;
  * 
  */
 
-public class TableroJuego extends Tablero {
+public class TableroJuego extends Tablero implements IAcciones{
 
     
     
     private Escenario escenario;
+    
     //CLASE GENERICA
-    private ArrayList<Zombie>listaZombie;
-	private ArrayList<Torreta>listaTorreta;
-	private ArrayList<Aldea>listaAldeas;
+    
+    private Contenedor<Zombie>listazombie;
+	private Contenedor<Torreta>listaTorreta;
+	private Contenedor<Aldea>listaAldea;
 	
 	private Heroe heroe;
 	private Castillo castillo;
@@ -57,9 +60,10 @@ public class TableroJuego extends Tablero {
     	super(juego);
         escenario = new Escenario("src/recursos/escenarios/escenario1.txt");
         
-        listaAldeas = new ArrayList<>();
-		listaTorreta = new ArrayList<>();
-		listaZombie = new ArrayList<>();
+        listazombie = new Contenedor<Zombie>();
+        listaAldea = new Contenedor<Aldea>();
+        listaTorreta = new Contenedor<Torreta>();
+        
 		heroe = new Heroe(100,100);
 		castillo = new Castillo();
 		pincho = new Pincho();
@@ -70,14 +74,13 @@ public class TableroJuego extends Tablero {
     public void actualizar() {
         escenario.actualizar();
         heroe.actualizar();
+        //todas las clases basicamente que actualicen
     }
 
-    @Override
-    public void renderizar(Graphics g) {
-        
-        escenario.renderizar(g);
-        //heroe.renderizar(g);
-        //g.drawImage(Recurso.cespedOscuro, 0, 0, null);
-    }
+	@Override
+	public void renderizar(Graphics g) {
+		// TODO Auto-generated method stub
+		
+	}
     
 }
