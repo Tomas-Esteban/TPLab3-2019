@@ -6,11 +6,7 @@
 package Escenario;
 
 import Baldosas.Baldosa;
-<<<<<<< HEAD
-import Graficos.Recurso;
-=======
 import Interfaces.IAcciones;
->>>>>>> d7d57d9214c44c19ca7be2fc2f22fadf0feb5ad3
 import Utilidades.Utilidad;
 import java.awt.Graphics;
 

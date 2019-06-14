@@ -13,7 +13,6 @@ import Principal.Tienda;
 import Principal.Torreta;
 import Principal.Zombie;
 import Escenario.Escenario;
-import Graficos.Recurso;
 import Generica.Contenedor;
 import Interfaces.IAcciones;
 import Pantallas.Juego;
@@ -85,10 +84,6 @@ public class TableroJuego extends Tablero implements IAcciones{
         //heroe.renderizar(g);
         //g.drawImage(Recurso.cespedOscuroInferior, 0, 0, null);
     }
-	@Override
-	public void renderizar(Graphics g) {
-		// TODO Auto-generated method stub
-		
-	}
+
     
 }
