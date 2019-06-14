@@ -20,7 +20,7 @@ import java.awt.image.BufferedImage;
  * <br> Presentacion sobre pilares de la POO by @author Benoffi7 </br>
  * @see <a href = "https://docs.google.com/presentation/d/1ln1p_6b44mKaHEJkfdimSZrOWz9hK5vg1FegjWzlkkg/edit#slide=id.g348419c47f_0_282" /> Herenecia en Java - PowerPoint</a>
  * @see {@link https://docs.google.com/presentation/d/1ln1p_6b44mKaHEJkfdimSZrOWz9hK5vg1FegjWzlkkg/edit#slide=id.g348419c47f_0_282}
- * @see  Baldosas.Baldosa;
+ * @see  Baldosas.Baldosa
  *  
  */
 public class BaldosaCespedOscuro extends Baldosa {

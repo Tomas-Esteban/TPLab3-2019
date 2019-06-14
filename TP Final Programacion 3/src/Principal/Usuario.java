@@ -4,6 +4,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
  /** 
  * 
  * @author ivanmdq22
@@ -106,11 +107,8 @@ public class Usuario {
 			joUsuario.put("contrasena",pass);
 			ja.put(joUsuario);
 			JsonUtil.grabar(ja);
-			
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
-
 	}
-
 }

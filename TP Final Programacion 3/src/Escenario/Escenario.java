@@ -6,7 +6,11 @@
 package Escenario;
 
 import Baldosas.Baldosa;
+<<<<<<< HEAD
 import Graficos.Recurso;
+=======
+import Interfaces.IAcciones;
+>>>>>>> d7d57d9214c44c19ca7be2fc2f22fadf0feb5ad3
 import Utilidades.Utilidad;
 import java.awt.Graphics;
 
@@ -25,7 +29,7 @@ import java.awt.Graphics;
  * 
  */
 
-public class Escenario {
+public class Escenario implements IAcciones {
     
 	private int ancho, alto;
     private int posicionX, posicionY;
@@ -37,10 +41,12 @@ public class Escenario {
         
         
     }
+ 
+    @Override
     public void actualizar(){
         
     }
-    
+    @Override
     public void renderizar(Graphics g){
         for(int y = 0; y < alto; y++)
             for(int x = 0; x < ancho; x++){
@@ -84,4 +90,5 @@ public class Escenario {
            }
         }
     }
+	
 }

@@ -8,6 +8,8 @@ package Baldosas;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import Interfaces.IAccionesB;
+
 /**
  * 
  * @author ivanmdq22
@@ -29,7 +31,7 @@ import java.awt.image.BufferedImage;
  * 
  */
 
-public class Baldosa{
+public class Baldosa  implements IAccionesB{
     
     //Staticas
     public static Baldosa[] baldosas = new Baldosa[256];
@@ -50,16 +52,19 @@ public class Baldosa{
         baldosas[id] = this;
     }
     
+    public boolean esSolido(){
+        return false;
+    }
+    
+
+    @Override
     public void actualizar(){
         
     }
     
+    @Override
     public void renderizar(Graphics g, int x, int y){
         g.drawImage(textura, x, y, ANCHO_BALDOSA, ALTO_BALDOSA, null);
-    }
-    
-    public boolean esSolido(){
-        return false;
     }
 }
 

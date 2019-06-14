@@ -18,7 +18,7 @@ import Graficos.Recurso;
  * Clase que permite crear un objeto baldosa de en la cual se situa la muralla. (clase hija que extiende de Baldosa)
  * <br> Presentacion sobre pilares de la POO by @author Benoffi7 </br>
  * @see <a href = "https://docs.google.com/presentation/d/1ln1p_6b44mKaHEJkfdimSZrOWz9hK5vg1FegjWzlkkg/edit#slide=id.g348419c47f_0_282" /> Herenecia en Java - PowerPoint</a>
- * @see  Baldosas.Baldosa;
+ * @see  Baldosas.Baldosa
  * 
  */
 

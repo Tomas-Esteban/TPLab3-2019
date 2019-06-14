@@ -14,7 +14,7 @@ import Interfaces.IVendible;
  * defensa de un solo uso,tiene un danio que produce al zombie y se muereuna vez que el zombie pase por encima.
  * <br> Presentacion sobre pilares de la POO by @author Benoffi7 </br>
  * @see <a href = "https://docs.google.com/presentation/d/1ln1p_6b44mKaHEJkfdimSZrOWz9hK5vg1FegjWzlkkg/edit#slide=id.g348419c47f_0_282" /> Herencia en Java - PowerPoint </a>
- * @see Principal.Defensa; 
+ * @see Principal.Defensa
  *
  */
 
