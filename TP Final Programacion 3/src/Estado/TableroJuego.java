@@ -13,6 +13,7 @@ import Principal.Tienda;
 import Principal.Torreta;
 import Principal.Zombie;
 import Escenario.Escenario;
+import Graficos.Recurso;
 import Pantallas.Juego;
 import java.awt.Graphics;
 import java.util.ArrayList;
@@ -77,7 +78,7 @@ public class TableroJuego extends Tablero {
         
         escenario.renderizar(g);
         //heroe.renderizar(g);
-        //g.drawImage(Recurso.cespedOscuro, 0, 0, null);
+        //g.drawImage(Recurso.cespedOscuroInferior, 0, 0, null);
     }
     
 }

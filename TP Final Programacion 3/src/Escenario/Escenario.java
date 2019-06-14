@@ -6,6 +6,7 @@
 package Escenario;
 
 import Baldosas.Baldosa;
+import Graficos.Recurso;
 import Utilidades.Utilidad;
 import java.awt.Graphics;
 
@@ -75,9 +76,11 @@ public class Escenario {
         posicionY = Utilidad.analizarEntero(numeros[3]);                                                                                    //
                                                                                                                                             //
         multiBaldosas = new int[ancho][alto];                                                                                               //
-        for(int y = 0;y < alto; y++){                                                                                                       //
-            for(int x = 0;x <ancho; x++){                                                                                                   //-|
-            multiBaldosas[x][y] = Utilidad.analizarEntero(numeros[(x + y * ancho) + 4]); // el cuatro equivale a la cantidad de variables aca -|
+        
+        for(int y = 0;y < alto; y++){
+        	for(int x = 0;x <ancho; x++){                                                                                                   //-|
+            	System.out.println(" "+ x + " "+ y + " " + Utilidad.analizarEntero(numeros[( (x + y * ancho + 4))]));
+            	multiBaldosas[x][y] = Utilidad.analizarEntero(numeros[( (x + y * ancho + 4)) ]); // el cuatro equivale a la cantidad de variables aca -|
            }
         }
     }
