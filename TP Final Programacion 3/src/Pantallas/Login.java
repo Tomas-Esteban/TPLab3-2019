@@ -1,127 +1,154 @@
 package Pantallas;
 
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
+import java.awt.EventQueue;
+import java.awt.HeadlessException;
+
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import javax.swing.JTextField;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import Principal.JsonUtil;
-import javax.swing.JButton;
-import javax.swing.JFrame;
+import Principal.Usuario;
+
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-/**
- * 
- * @author ivanmdq22
- * @author Pardo
- * @author Nazuti.
- * @since 10/05/2019
- * @version 1.6
- * 
- * Clase de la interfaz grafica Swing que se encarga de crear un login del juego.
- * <br> Tutorial sobre <strong> Swing en Eclipse </strong> </br>
- * @see <a href="https://www.youtube.com/playlist?list=PLMQ4k-hUWGNmQwP3u5HP894NnQQ9lGY_d" /> Swing Eclipse </a>
- * 
- */
+public class Login {
 
-public class Login extends JFrame{
+	private JFrame frame;
+	private JTextField fieldUsuario;
+	private JTextField fieldpass;
 
 	/**
-	 * 
+	 * Launch the application.
 	 */
-	private static final long serialVersionUID = 1L;
-	
-	
-	private JPanel contentPane;
-	private JTextField nombreUsuario;
-	private JTextField contrasenaUsuario;
-    
-	
-    
-
-		
-	public Login() {
-		
-		
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(null);
-		
-		JButton btnNewButton = new JButton("Aceptar");
-		btnNewButton.addActionListener(new ActionListener() {
-			
-			public void actionPerformed(ActionEvent e) {
-				if(comprobarUsuario()==true) {
-					
-					SeleccionNivel s1 = new SeleccionNivel();
-					JOptionPane.showMessageDialog(s1,"Bienvenido");
-					
-				}else {
-					
-					JFrame error = new JFrame("ERROR");
-					error.setVisible(true);
-					error.setSize(800,600);
-					
-					JOptionPane.showMessageDialog(error,"Error, que desea hacer?");
-					
-					nombreUsuario.setText("");
-					contrasenaUsuario.setText("");
-					
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Login window = new Login();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
 				}
-				
-				
 			}
 		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Login() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
 		
+		fieldUsuario = new JTextField();
+		fieldUsuario.setBounds(149, 75, 124, 19);
+		frame.getContentPane().add(fieldUsuario);
+		fieldUsuario.setColumns(10);
 		
-		btnNewButton.setBounds(175, 175, 114, 25);
-		contentPane.add(btnNewButton);
+		fieldpass = new JTextField();
+		fieldpass.setBounds(149, 142, 124, 19);
+		frame.getContentPane().add(fieldpass);
+		fieldpass.setColumns(10);
 		
-		nombreUsuario = new JTextField();
-		nombreUsuario.setBounds(175, 81, 124, 19);
-		contentPane.add(nombreUsuario);
-		nombreUsuario.setColumns(10);
+		JButton btnAceptar = new JButton("Aceptar");
+		btnAceptar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				try {
+					if(comprobarUsuario()==true) {
+						
+						JFrame Bienvenido = new JFrame("Bienvenido");
+						//SelNivel d1 = new SelNivel();
+						JOptionPane.showMessageDialog(Bienvenido,"Bienvenido");
+						
+					}else {
+						
+						JFrame error = new JFrame("ERROR");
+					
+						error.setVisible(true);
+						error.setSize(800,600);
+						
+						JOptionPane.showMessageDialog(error,"Error, que desea hacer?");
+						
+						fieldUsuario.setText("");
+						fieldpass.setText("");
+						
+					}
+				} catch (HeadlessException | JSONException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
+		btnAceptar.setBounds(159, 211, 114, 25);
+		frame.getContentPane().add(btnAceptar);
 		
-		contrasenaUsuario = new JTextField();
-		contrasenaUsuario.setBounds(175, 106, 124, 19);
-		contentPane.add(contrasenaUsuario);
-		contrasenaUsuario.setColumns(10);
+		JLabel lblContrasea = new JLabel("Contraseña");
+		lblContrasea.setBounds(73, 144, 66, 15);
+		frame.getContentPane().add(lblContrasea);
 		
-		
+		JLabel lblNombre = new JLabel("Nombre");
+		lblNombre.setBounds(73, 77, 66, 15);
+		frame.getContentPane().add(lblNombre);
 	}
 	
+	/**
+	* Metodo que obtiene el nombre del usuario de un TextField.
+	* @return  los datos pasados por teclado.
+	*/
 	public String pideNombreUsuario() {
-		return nombreUsuario.getText();
+		return fieldUsuario.getText();
 	}
+	/**
+	* Metodo que obtiene la contrasena del usuario de un TextField.
+	* @return  los datos pasados por teclado.
+	*/
 	public String pideClaveUsuario() {
-		return contrasenaUsuario.getText();
+		return fieldpass.getText();
 	}
-	
-	public boolean comprobarUsuario() {
-		
+	/**
+	 * metodo que se encarga de saber si un usuario ya esta en el archivo o no.
+	 */
+	public boolean comprobarUsuario () throws JSONException{
+		boolean rta = false;
+		Usuario aux=null;
 		try {
+			
 			JSONArray arraye = new JSONArray(JsonUtil.leer());
 			
 			for(int i=0;i<arraye.length();i++) {
-				JSONObject jo = arraye.getJSONObject(i); 
 				
-				if(jo.getString("nombre").equals(pideNombreUsuario()) && jo.getString("contrasena").equals(pideClaveUsuario())) {
-					return true;
+				JSONObject jo = arraye.getJSONObject(i); 
+				aux = new Usuario(jo.getString("Contrasena"),jo.getString("nombre"));
+				
+				if(aux.getNombre().equals(pideNombreUsuario()) && aux.getPassword().equals(pideClaveUsuario())) {
+					return rta = true;
 				}else {
-					return false;
+					return rta = false;
 				}
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
-		return rootPaneCheckingEnabled;
+		return rta;
 		
 	}
-	
-	
 }

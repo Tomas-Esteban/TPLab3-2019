@@ -3,6 +3,8 @@ package Pantallas;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class SelNivel {
 
@@ -40,5 +42,4 @@ public class SelNivel {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 	}
-
 }

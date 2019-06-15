@@ -1,11 +1,5 @@
 package Principal;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import Pantallas.Login;
-
 
  /** 
  * 
@@ -33,6 +27,10 @@ public class Usuario {
 		this.password = password;
 		
 	}
+	public Usuario() {
+		nombre = "";
+		password = "";
+	}
 	
 	public String getPassword() {
 		return password;
@@ -48,33 +46,11 @@ public class Usuario {
 	}
 	
 
-	/**
-	 * metodo que se encarga de saber si un usuario ya esta en el archivo o no.
-	 */
 	
-	/**
-	* Metodo que obtiene el nombre del usuario de un TextField.
-	* @return retorna los datos pasados por teclado.
-	*/
-	/*
-	 
-	 
-	public String pideNombreUsuario(String nombre) {
-		return nombre;
-	}
 	
-	*/
-	/**
-	* Metodo que obtiene la contrasena del usuario de un TextField.
-	* @return retorna los datos pasados por teclado.
-	*/
 	
 	/*
-	public String pideClaveUsuario(String pass) {
-		return pass;
-	}
-	*/
-	
+	 
 	/**
 	* metodo que se encarga de crear un usuario corroborando que el usuario no este creado.
 	*/
