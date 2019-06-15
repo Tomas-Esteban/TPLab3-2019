@@ -39,8 +39,7 @@ import java.awt.Graphics;
 
 public class TableroJuego extends Tablero implements IAcciones{
 
-    //ahi te ahgo este coment a ver si lo ves
-    
+  
     private Escenario escenario;
     
     //CLASE GENERICA

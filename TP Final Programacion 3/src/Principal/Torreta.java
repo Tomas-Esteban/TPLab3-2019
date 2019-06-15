@@ -1,6 +1,7 @@
 package Principal;
 
 import Interfaces.IVendible;
+import Tienda.Tienda;
  /** 
  * 
  * @author ivanmdq22
@@ -29,7 +30,7 @@ public class Torreta extends Defensa implements IVendible{
 
 
 	@Override
-	public double getValor(TiendaP t) {
+	public double getValor(Tienda t) {
 		// TODO Auto-generated method stub
 		return t.getPrecioTorreta();
 	}

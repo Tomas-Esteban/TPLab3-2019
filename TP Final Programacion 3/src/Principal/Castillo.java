@@ -1,5 +1,7 @@
 package Principal;
 
+import Tienda.Tienda;
+
 /** 
  * 
  * @author ivanmdq22
@@ -19,11 +21,11 @@ package Principal;
 public class Castillo {
 	
 	private Muralla muralla;
-	private TiendaP tienda;
+	private Tienda tienda;
 
 	public Castillo() {
 		muralla = new Muralla();
-		tienda = new TiendaP();
+		tienda = new Tienda();
 	}
 
 	public Muralla getMuralla() {
@@ -34,11 +36,11 @@ public class Castillo {
 		this.muralla = muralla;
 	}
 
-	public TiendaP getTienda() {
+	public Tienda getTienda() {
 		return tienda;
 	}
 
-	public void setTienda(TiendaP tienda) {
+	public void setTienda(Tienda tienda) {
 		this.tienda = tienda;
 	}
 	

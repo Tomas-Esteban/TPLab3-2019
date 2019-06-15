@@ -1,6 +1,7 @@
 package Principal;
 
 import Interfaces.IVendible;
+import Tienda.Tienda;
 
 /** 
  * 
@@ -47,7 +48,7 @@ public class Heroe extends Personaje implements IVendible
 
 	
 	@Override
-	public double getValor(TiendaP tienda) {
+	public double getValor(Tienda tienda) {
 		// TODO Auto-generated method stub
 		return tienda.getPrecioHeroe();
 	}

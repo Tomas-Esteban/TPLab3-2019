@@ -1,6 +1,7 @@
 package Principal;
 
 import Interfaces.IVendible;
+import Tienda.Tienda;
  
  /** 
  * 
@@ -33,7 +34,7 @@ public class Pincho extends Defensa implements IVendible{
 	
 	
 	@Override
-	public double getValor(TiendaP t) {
+	public double getValor(Tienda t) {
 		// TODO Auto-generated method stub
 		return t.getPrecioPinchos();
 	}

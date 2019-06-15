@@ -22,7 +22,7 @@ public class Tienda implements IAcciones{
 	
 	public void inicializarTienda() {
 		for(int i = 0; i < boton.length; i++ ) {
-			boton[i] = new Rectangle (220,10,tamanoBoton,tamanoBoton);
+			boton[i] = new Rectangle (420,420,tamanoBoton,tamanoBoton);
 	
 		}
 	}
@@ -41,6 +41,30 @@ public class Tienda implements IAcciones{
 		for(int i = 0; i<boton.length; i++ ) {
 			g.fillRect(boton[i].x, boton[i].y, boton[i].width, boton[i].height);
 		}
+	}
+
+
+	public double getPrecioAldea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	public double getPrecioHeroe() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	public double getPrecioPinchos() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	public double getPrecioTorreta() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
