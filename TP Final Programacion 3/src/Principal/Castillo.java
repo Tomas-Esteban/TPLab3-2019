@@ -19,11 +19,11 @@ package Principal;
 public class Castillo {
 	
 	private Muralla muralla;
-	private Tienda tienda;
+	private TiendaP tienda;
 
 	public Castillo() {
 		muralla = new Muralla();
-		tienda = new Tienda();
+		tienda = new TiendaP();
 	}
 
 	public Muralla getMuralla() {
@@ -34,11 +34,11 @@ public class Castillo {
 		this.muralla = muralla;
 	}
 
-	public Tienda getTienda() {
+	public TiendaP getTienda() {
 		return tienda;
 	}
 
-	public void setTienda(Tienda tienda) {
+	public void setTienda(TiendaP tienda) {
 		this.tienda = tienda;
 	}
 	

@@ -33,7 +33,7 @@ public class Pincho extends Defensa implements IVendible{
 	
 	
 	@Override
-	public double getValor(Tienda t) {
+	public double getValor(TiendaP t) {
 		// TODO Auto-generated method stub
 		return t.getPrecioPinchos();
 	}

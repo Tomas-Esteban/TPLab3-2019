@@ -47,7 +47,7 @@ public class Heroe extends Personaje implements IVendible
 
 	
 	@Override
-	public double getValor(Tienda tienda) {
+	public double getValor(TiendaP tienda) {
 		// TODO Auto-generated method stub
 		return tienda.getPrecioHeroe();
 	}

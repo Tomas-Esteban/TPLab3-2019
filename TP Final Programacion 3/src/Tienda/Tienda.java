@@ -6,7 +6,7 @@ import Interfaces.IAcciones;
 public class Tienda implements IAcciones{
 
 	public static int anchoTienda = 8;
-	public static int tamañoBoton = 32;
+	public static int tamanoBoton = 32;
 	
 	public Rectangle[] boton = new Rectangle[anchoTienda];
 	
@@ -22,7 +22,7 @@ public class Tienda implements IAcciones{
 	
 	public void inicializarTienda() {
 		for(int i = 0; i < boton.length; i++ ) {
-			boton[i] = new Rectangle (220,10,tamañoBoton,tamañoBoton);
+			boton[i] = new Rectangle (220,10,tamanoBoton,tamanoBoton);
 	
 		}
 	}
@@ -42,5 +42,5 @@ public class Tienda implements IAcciones{
 			g.fillRect(boton[i].x, boton[i].y, boton[i].width, boton[i].height);
 		}
 	}
-	
+
 }

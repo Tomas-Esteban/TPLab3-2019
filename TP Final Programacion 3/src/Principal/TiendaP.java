@@ -1,7 +1,9 @@
 package Principal;
 
+import java.awt.Graphics;
 import java.util.HashMap;
 
+import Interfaces.IAcciones;
 import Interfaces.IVendible;
 
 /** 
@@ -17,12 +19,12 @@ import Interfaces.IVendible;
 *
 */
 
-public class Tienda {
+public class TiendaP implements IAcciones{
 	
 	private HashMap<IVendible,Integer>mapaPrecios;
 	
 	
-	public Tienda() 
+	public TiendaP() 
 	{
 		mapaPrecios = new HashMap<IVendible, Integer>();
 		//heroe = new Heroe(100, 100); // <---- es para la img.
@@ -54,5 +56,17 @@ public class Tienda {
 	}
 	public double getPrecioAldea() {
 		return 75;
+	}
+
+	@Override
+	public void actualizar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void renderizar(Graphics g) {
+		// TODO Auto-generated method stub
+		
 	}
 }

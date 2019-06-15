@@ -1,6 +1,6 @@
 package Interfaces;
 
-import Principal.Tienda;
+import Principal.TiendaP;
 
 /**
  * 
@@ -18,6 +18,6 @@ import Principal.Tienda;
 
 public interface IVendible 
 {
-	double getValor(Tienda t);
+	double getValor(TiendaP t);
 	
 }
