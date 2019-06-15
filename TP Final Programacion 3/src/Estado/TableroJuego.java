@@ -74,6 +74,7 @@ public class TableroJuego extends Tablero implements IAcciones{
     public void actualizar() {
         escenario.actualizar();
         heroe.actualizar();
+        tienda.
         //todas las clases basicamente que actualicen
     }
 
@@ -81,6 +82,7 @@ public class TableroJuego extends Tablero implements IAcciones{
     public void renderizar(Graphics g) {
         
         escenario.renderizar(g);
+        tienda.renderizar(g);
         //heroe.renderizar(g);
         //g.drawImage(Recurso.cespedOscuroInferior, 0, 0, null);
     }

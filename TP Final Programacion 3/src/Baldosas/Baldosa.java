@@ -39,6 +39,7 @@ public class Baldosa  implements IAccionesB{
     public static Baldosa cespedOscuroSuperior = new BaldosaCespedOscuroSuperior(1);
     public static Baldosa cespedOscuroInferior = new BaldosaCespedOscuroInferior(2);
     public static Baldosa muralla = new BaldosaMuralla(3);  
+    public static Baldosa rellenoNegro = new BaldosaRellenoNegro(4);
     
     public static final int ANCHO_BALDOSA = 32, ALTO_BALDOSA = 32;
     

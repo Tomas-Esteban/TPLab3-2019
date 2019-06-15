@@ -53,7 +53,7 @@ public class Escenario implements IAcciones {
     public Baldosa getBaldosa(int x, int y){
         Baldosa b = Baldosa.baldosas[multiBaldosas[x][y]];
         if(b == null)
-            return Baldosa.cespedOscuro;
+            return Baldosa.rellenoNegro;
         return b;
     }
     private void cargarEscenario(String ruta){
