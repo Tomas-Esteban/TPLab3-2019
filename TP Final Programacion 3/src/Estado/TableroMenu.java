@@ -32,7 +32,7 @@ public class TableroMenu extends Tablero {
 
     @Override
     public void actualizar() {
-
+    	
     }
 
     @Override
