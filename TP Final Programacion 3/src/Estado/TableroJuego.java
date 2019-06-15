@@ -9,7 +9,6 @@ import Principal.Aldea;
 import Principal.Castillo;
 import Principal.Heroe;
 import Principal.Pincho;
-import Principal.TiendaP;
 import Principal.Torreta;
 import Principal.Zombie;
 import Tienda.Tienda;
@@ -40,7 +39,7 @@ import java.awt.Graphics;
 
 public class TableroJuego extends Tablero implements IAcciones{
 
-    
+    //ahi te ahgo este coment a ver si lo ves
     
     private Escenario escenario;
     
@@ -83,7 +82,7 @@ public class TableroJuego extends Tablero implements IAcciones{
     public void renderizar(Graphics g) {
         
         escenario.renderizar(g);
-        //tienda.renderizar(g);
+        tienda.renderizar(g);
         //heroe.renderizar(g);
         //g.drawImage(Recurso.cespedOscuroInferior, 0, 0, null);
     }
