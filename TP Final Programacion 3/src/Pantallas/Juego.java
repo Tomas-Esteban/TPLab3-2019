@@ -5,13 +5,14 @@
  */
 package Pantallas;
 
-import Estado.Tablero;
-import Estado.TableroJuego;
-import Estado.TableroMenu;
 import Graficos.CargadorImagen;
 import Graficos.HojaSprites;
 import Graficos.Recurso;
 import Pantallas.Pantalla;
+import Tablero.Tablero;
+import Tablero.TableroJuego;
+import Tablero.TableroMenu;
+
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;

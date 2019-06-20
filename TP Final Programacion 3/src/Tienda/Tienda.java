@@ -4,11 +4,13 @@ import java.awt.*;
 import Interfaces.IAcciones;
 import Interfaces.IVendible;
 
-public class Tienda implements IAcciones{
+public class Tienda implements IAcciones,IVendible{
 
 	public static int anchoTienda = 8;
 	public static int tamanoBoton = 32;
-	
+	public int espaciado = 2;
+	public int posicionX = 280;
+	public int posicionY = 350;
 	public Rectangle[] boton = new Rectangle[anchoTienda];
 	
 	
@@ -23,7 +25,7 @@ public class Tienda implements IAcciones{
 	
 	public void inicializarTienda() {
 		for(int i = 0; i < boton.length; i++ ) {
-			boton[i] = new Rectangle (420,420,tamanoBoton,tamanoBoton);
+			boton[i] = new Rectangle (posicionX+((tamanoBoton+espaciado)*i),posicionY,tamanoBoton,tamanoBoton);
 	
 		}
 	}
@@ -66,6 +68,12 @@ public class Tienda implements IAcciones{
 	public double getPrecioTorreta() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+
+	@Override
+	public double getValor(Tienda t) {
+		return getValor(t);
 	}
 
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Estado;
+package Tablero;
 
 import Pantallas.Juego;
 import java.awt.Graphics;

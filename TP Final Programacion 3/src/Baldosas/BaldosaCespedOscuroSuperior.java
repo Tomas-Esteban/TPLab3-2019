@@ -6,7 +6,6 @@
 package Baldosas;
 
 import Graficos.Recurso;
-import java.awt.image.BufferedImage;
 
 /**
  * 

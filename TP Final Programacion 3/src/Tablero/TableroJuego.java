@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Estado;
+package Tablero;
 
 import Principal.Aldea;
 import Principal.Castillo;
@@ -29,7 +29,7 @@ import java.awt.Graphics;
  * Clase Hija de Tablero que permite al programador saber en que situacion se encuentra el juego. 
  * <br> Presentacion sobre pilares de la POO by @author Benoffi7 </br>
  * @see <a href = "https://docs.google.com/presentation/d/1ln1p_6b44mKaHEJkfdimSZrOWz9hK5vg1FegjWzlkkg/edit#slide=id.g348419c47f_0_282" /> Herenecia en Java - PowerPoint</a> 
- * @see  Estado.Tablero
+ * @see  Tablero.Tablero
  * @param objeto Heroe.
  * @param objeto Escenario.
  * @param lista zombie, torreta, aldea.
