@@ -2,6 +2,7 @@ package Tienda;
 import java.awt.*;
 
 import Interfaces.IAcciones;
+import Interfaces.IVendible;
 
 public class Tienda implements IAcciones{
 
