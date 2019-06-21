@@ -55,12 +55,10 @@ public class Defensa implements IAcciones{
 	}
 	@Override
 	public void actualizar() {
-		// TODO Auto-generated method stub
 		
 	}
 	@Override
 	public void renderizar(Graphics g) {
-		// TODO Auto-generated method stub
 		
 	}
 	

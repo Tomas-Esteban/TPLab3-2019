@@ -25,7 +25,7 @@ public class Personaje implements IAcciones {
 	
 	
 	
-	private static double hp = 100;
+	private static double hp;
 	private int posicionX;
 	private int posicionY;
 	private double dps;
@@ -45,6 +45,7 @@ public class Personaje implements IAcciones {
 		posicionY=0;
 		dps=0;
 		vdm=0;
+		hp=100;
 	}
 	
 	public void mover(int posX, int posY) {
@@ -78,13 +79,11 @@ public class Personaje implements IAcciones {
 
 	@Override
 	public void actualizar() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void renderizar(Graphics g) {
-		// TODO Auto-generated method stub
 		
 	}
 	

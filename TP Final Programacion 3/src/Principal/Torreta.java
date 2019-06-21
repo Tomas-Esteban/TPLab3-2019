@@ -1,5 +1,8 @@
 package Principal;
 
+import java.awt.Graphics;
+
+import Interfaces.IAcciones;
 import Interfaces.IVendible;
 import Tienda.Tienda;
  /** 
@@ -21,19 +24,29 @@ import Tienda.Tienda;
  * 
  */
 
-public class Torreta extends Defensa implements IVendible{
+public class Torreta extends Defensa implements IVendible,IAcciones{
 
-	public  Torreta() {
 	
+	
+	public  Torreta() {
+		super();
 	}
 	
 
 
 	@Override
 	public double getValor(Tienda t) {
-		// TODO Auto-generated method stub
 		return t.getPrecioTorreta();
 	}
 	
+	@Override
+	public void actualizar() {
+		super.actualizar();
+	}
+	
+	@Override
+	public void renderizar(Graphics g) {
+		super.renderizar(g);
+	}
 	
 }

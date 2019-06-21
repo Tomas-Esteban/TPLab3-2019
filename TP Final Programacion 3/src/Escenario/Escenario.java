@@ -42,6 +42,7 @@ public class Escenario implements IAcciones {
     public void actualizar(){
         
     }
+    
     @Override
     public void renderizar(Graphics g){
         for(int y = 0; y < alto; y++)

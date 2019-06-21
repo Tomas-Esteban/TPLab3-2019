@@ -1,5 +1,8 @@
 package Principal;
 
+import java.awt.Graphics;
+
+import Interfaces.IAcciones;
 import Tienda.Tienda;
 
 /** 
@@ -18,14 +21,15 @@ import Tienda.Tienda;
  *
  */
 
-public class Castillo {
+public class Castillo implements IAcciones {
 	
 	private Muralla muralla;
 	private Tienda tienda;
 
 	public Castillo() {
 		muralla = new Muralla();
-		tienda = new Tienda();
+		//si descomento se rompe.
+		//tienda = new Tienda();
 	}
 
 	public Muralla getMuralla() {
@@ -42,6 +46,17 @@ public class Castillo {
 
 	public void setTienda(Tienda tienda) {
 		this.tienda = tienda;
+	}
+
+	@Override
+	public void actualizar() {
+		
+	}
+
+	@Override
+	public void renderizar(Graphics g) {
+		
+		
 	}
 	
 	

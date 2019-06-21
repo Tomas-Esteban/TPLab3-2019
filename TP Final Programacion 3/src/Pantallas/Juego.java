@@ -5,7 +5,6 @@
  */
 package Pantallas;
 
-import Graficos.CargadorImagen;
 import Graficos.HojaSprites;
 import Graficos.Recurso;
 import Pantallas.Pantalla;
@@ -16,8 +15,6 @@ import Tablero.TableroMenu;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * 

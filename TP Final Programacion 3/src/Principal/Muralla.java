@@ -16,5 +16,18 @@ package Principal;
 public class Muralla {
 	
 	private double hp;
+
+	public Muralla() {
+		hp = 5;
+	}
+	public double getHp() {
+		return hp;
+	}
+
+	public void setHp(double hp) {
+		this.hp = hp;
+	}
+	
+	
 	
 }

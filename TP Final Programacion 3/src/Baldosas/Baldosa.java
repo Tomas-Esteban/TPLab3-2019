@@ -33,7 +33,7 @@ import Interfaces.IAccionesB;
 
 public class Baldosa  implements IAccionesB{
     
-    //Staticas
+    // Staticas
     public static Baldosa[] baldosas = new Baldosa[256];
     public static Baldosa cespedOscuro = new BaldosaCespedOscuro(0);
     public static Baldosa cespedOscuroSuperior = new BaldosaCespedOscuroSuperior(1);

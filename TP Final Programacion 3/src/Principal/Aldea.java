@@ -1,5 +1,8 @@
 package Principal;
 
+import java.awt.Graphics;
+
+import Interfaces.IAcciones;
 import Interfaces.IVendible;
 import Tienda.Tienda;
 
@@ -21,12 +24,15 @@ import Tienda.Tienda;
  * 
  */
 
-public class Aldea implements IVendible {
+public class Aldea implements IVendible,IAcciones{
 
 	private double oroPorSegundo;
 	private boolean vivo;
 	
-	
+	public Aldea() {
+		oroPorSegundo=3;
+		vivo=false;
+	}
 	
 	public double getOroPorSegundo() {
 		return oroPorSegundo;
@@ -44,8 +50,17 @@ public class Aldea implements IVendible {
 
 	@Override
 	public double getValor(Tienda t) {
-		// TODO Auto-generated method stub
 		return t.getPrecioAldea();
+	}
+	@Override
+	public void actualizar() {
+		
+		
+	}
+	@Override
+	public void renderizar(Graphics g) {
+		
+		
 	}
 		
 }

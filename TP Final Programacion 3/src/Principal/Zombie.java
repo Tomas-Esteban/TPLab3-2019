@@ -28,7 +28,7 @@ public class Zombie extends Personaje{
 	
 	public Zombie () {
 		super();
-		oro = 0;
+		oro = 50;
 	}
 	
 	
