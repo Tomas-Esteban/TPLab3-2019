@@ -5,10 +5,10 @@
  */
 package Tablero;
 
+import Principal.Tienda;
 import Principal.Zombie;
-import Tienda.Tienda;
-import Escenario.Escenario;
 import Generica.Contenedor;
+import Graficos.Escenario;
 import Interfaces.IAcciones;
 import Pantallas.Juego;
 import java.awt.Graphics;
@@ -46,7 +46,7 @@ public class TableroJuego extends Tablero implements IAcciones{
         
     	super(juego);
     	
-        escenario = new Escenario("src/recursos/escenarios/escenario1.txt");
+        escenario = new Escenario("src/Utilidades/escenario1.txt");
         
         listazombie = new Contenedor<Zombie>();
         tienda = new Tienda();

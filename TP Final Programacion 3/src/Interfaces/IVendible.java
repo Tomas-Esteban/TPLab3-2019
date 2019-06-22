@@ -1,6 +1,6 @@
 package Interfaces;
 
-import Tienda.Tienda;
+import Principal.Tienda;
 
 /**
  * 

@@ -1,7 +1,6 @@
 package Principal;
 
 import Interfaces.IVendible;
-import Tienda.Tienda;
 
 /** 
  * 

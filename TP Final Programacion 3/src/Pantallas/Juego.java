@@ -10,8 +10,6 @@ import Graficos.Recurso;
 import Pantallas.Pantalla;
 import Tablero.Tablero;
 import Tablero.TableroJuego;
-import Tablero.TableroMenu;
-
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
@@ -109,10 +107,10 @@ public class Juego implements Runnable {
           Recurso.inicializar();
           
           estadoJuego = new TableroJuego(this);
-          estadoMenu = new TableroMenu(this);
+          
           
           Tablero.setEstado(estadoJuego);
-        // test = CargadorImagen.cargarImagen("/recursos/texturas/bg.png");
+        // test = CargadorImagen.cargarImagen("/Utilidades/bg.png");
          // hoja = new HojaSprites(test);
     }
     

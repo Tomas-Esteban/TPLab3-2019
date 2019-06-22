@@ -27,7 +27,7 @@ public class Recurso {
     public static BufferedImage jugador,cespedOscuroInferior,cespedOscuroSuperior, muralla,cespedOscuro, rellenoNegro;
     
     public static void inicializar(){
-        HojaSprites hoja = new HojaSprites(CargadorImagen.cargarImagen("/recursos/texturas/tileset.png"));
+        HojaSprites hoja = new HojaSprites(CargadorImagen.cargarImagen("/Utilidades/tileset.png"));
         
        cespedOscuro = hoja.ajustar(0, 0, ancho, alto);
        cespedOscuroSuperior = hoja.ajustar(ancho, 0, ancho, alto);
@@ -35,5 +35,6 @@ public class Recurso {
        muralla = hoja.ajustar(ancho * 3, 0, ancho, alto);
        jugador  = hoja.ajustar(0, alto, ancho, alto);
        rellenoNegro = hoja.ajustar(ancho*4, 0, ancho, alto);
+      //castillo = hoja.ajustar(x, y, ancho, alto);
     }
 }

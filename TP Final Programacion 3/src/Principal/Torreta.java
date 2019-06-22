@@ -4,7 +4,6 @@ import java.awt.Graphics;
 
 import Interfaces.IAcciones;
 import Interfaces.IVendible;
-import Tienda.Tienda;
  /** 
  * 
  * @author ivanmdq22

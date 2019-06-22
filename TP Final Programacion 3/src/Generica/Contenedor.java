@@ -15,7 +15,7 @@ import Interfaces.IAcciones;
  * 
  * Clase contenedora generica instanciada con un hashmap para poder guardar
  * el precio de los articulos de la tienda.
- * @see Tienda.Tienda para ver su implementacion.
+ * @see Principal.Tienda para ver su implementacion.
  * @param <T1>
  * 
  */

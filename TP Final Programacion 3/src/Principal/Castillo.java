@@ -3,7 +3,6 @@ package Principal;
 import java.awt.Graphics;
 
 import Interfaces.IAcciones;
-import Tienda.Tienda;
 
 /** 
  * 
