@@ -1,7 +1,6 @@
 package Principal;
 
 import java.awt.Graphics;
-
 import Interfaces.IAcciones;
 
 /** 
@@ -53,6 +52,8 @@ public class Defensa implements IAcciones{
 	public void setPosicionY(int posicionY) {
 		this.posicionY = posicionY;
 	}
+	
+	
 	@Override
 	public void actualizar() {
 		

@@ -1,7 +1,6 @@
 package Principal;
 
 import java.awt.Graphics;
-
 import Interfaces.IAcciones;
 
 /** 
@@ -25,7 +24,7 @@ public class Personaje implements IAcciones {
 	
 	
 	
-	private static double hp;
+	private static double hp = 100;
 	private int posicionX;
 	private int posicionY;
 	private double dps;

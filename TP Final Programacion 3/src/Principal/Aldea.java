@@ -1,7 +1,6 @@
 package Principal;
 
 import java.awt.Graphics;
-
 import Interfaces.IAcciones;
 import Interfaces.IVendible;
 
@@ -25,20 +24,13 @@ import Interfaces.IVendible;
 
 public class Aldea implements IVendible,IAcciones{
 
-	private double oroPorSegundo;
+	private static double  oroPorSegundo = 3;
 	private boolean vivo;
 	
 	public Aldea() {
-		oroPorSegundo=3;
 		vivo=false;
 	}
 	
-	public double getOroPorSegundo() {
-		return oroPorSegundo;
-	}
-	public void setOroPorSegundo(double oroPorSegundo) {
-		this.oroPorSegundo = oroPorSegundo;
-	}
 	public boolean isVivo() {
 		return vivo;
 	}

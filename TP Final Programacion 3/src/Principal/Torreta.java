@@ -26,7 +26,6 @@ import Interfaces.IVendible;
 public class Torreta extends Defensa implements IVendible,IAcciones{
 
 	
-	
 	public  Torreta() {
 		super();
 	}

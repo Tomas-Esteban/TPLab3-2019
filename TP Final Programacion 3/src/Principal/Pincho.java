@@ -1,7 +1,6 @@
 package Principal;
 
 import java.awt.Graphics;
-
 import Interfaces.IAcciones;
 import Interfaces.IVendible;
  

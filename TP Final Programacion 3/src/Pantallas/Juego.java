@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Pantallas;
 
 import Graficos.HojaSprites;
@@ -165,8 +160,7 @@ public class Juego implements Runnable {
             return;
         try {
             hilo.join();
-        } catch (InterruptedException e) {  //ex
-            //Logger.getLogger(Juego.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException e) { 
            e.printStackTrace();
         }
     }

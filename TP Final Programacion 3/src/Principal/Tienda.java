@@ -1,4 +1,5 @@
 package Principal;
+
 import java.awt.*;
 
 import Generica.Contenedor;
@@ -24,9 +25,7 @@ public class Tienda implements IAcciones,IVendible{
 	
 	private Contenedor<Torreta>listaTorreta;
 	private Contenedor<Aldea>listaAldea;
-	
 	private Heroe heroe;
-	private Castillo castillo;
 	private Pincho pincho;
 	
 	/**
@@ -44,9 +43,8 @@ public class Tienda implements IAcciones,IVendible{
 		
 		listaAldea = new Contenedor<Aldea>();
         listaTorreta = new Contenedor<Torreta>();
-  
+ 
 		heroe = new Heroe(100,100);
-		castillo = new Castillo();
 		pincho = new Pincho();
 		inicializarTienda();
 		
@@ -80,7 +78,6 @@ public class Tienda implements IAcciones,IVendible{
 	@Override
 	public void actualizar() {
 		heroe.actualizar();
-		castillo.actualizar();
 		pincho.actualizar();
 		listaAldea.actualizar();
 		listaTorreta.actualizar();
