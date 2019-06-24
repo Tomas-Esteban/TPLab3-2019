@@ -33,8 +33,10 @@ import java.awt.Graphics;
  */
 
 public class TableroJuego extends Tablero implements IAcciones{
-
-  
+	
+	
+	private double oro;
+	
     private Escenario escenario;
  
     private Contenedor<Zombie>listazombie;

@@ -152,8 +152,6 @@ public class Login {
 				
 				if(aux.getNombre().equals(pideNombreUsuario()) && aux.getPassword().equals(pideClaveUsuario())) {
 					return rta = true;
-				}else {
-					return rta = false;
 				}
 			}
 		} catch (JSONException e) {
