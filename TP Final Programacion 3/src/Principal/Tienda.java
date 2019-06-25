@@ -23,6 +23,8 @@ import Interfaces.IVendible;
 public class Tienda implements IAcciones,IVendible{
 
 	
+	
+	
 	private Contenedor<Torreta>listaTorreta;
 	private Contenedor<Aldea>listaAldea;
 	private Heroe heroe;
@@ -36,6 +38,7 @@ public class Tienda implements IAcciones,IVendible{
 	public int espaciado = 2;
 	public int posicionX = 280;
 	public int posicionY = 350;
+	
 	public Rectangle[] boton = new Rectangle[anchoTienda];
 	
 	

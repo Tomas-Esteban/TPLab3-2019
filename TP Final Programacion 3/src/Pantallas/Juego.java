@@ -5,6 +5,7 @@ import Graficos.Recurso;
 import Pantallas.Pantalla;
 import Tablero.TableroJuego;
 import java.awt.Graphics;
+import java.awt.Point;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 
@@ -43,6 +44,9 @@ public class Juego implements Runnable {
     
     private BufferStrategy bs;
     private Graphics g;
+    
+    //mouse
+    public static Point mse = new  Point(0,0);
     
     //temporal
     private BufferedImage test;
