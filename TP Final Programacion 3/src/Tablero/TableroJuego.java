@@ -13,6 +13,8 @@ import Interfaces.IAcciones;
 import Pantallas.Juego;
 import java.awt.Graphics;
 
+import Abstracta.Tablero;
+
 /**
  * 
  * @author ivanmdq22
@@ -34,8 +36,9 @@ import java.awt.Graphics;
 
 public class TableroJuego extends Tablero implements IAcciones{
 	
-	
+	// el oro que va a tener nuestro usuario al comienzo del juego 
 	private double oro;
+	// faltaria un oro por segundo tambien
 	
     private Escenario escenario;
  

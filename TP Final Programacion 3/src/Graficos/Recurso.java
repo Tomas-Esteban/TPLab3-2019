@@ -24,7 +24,7 @@ import java.awt.image.BufferedImage;
 public class Recurso {
     
     private static final int ancho = 32, alto = 32;
-    public static BufferedImage jugador,cespedOscuroInferior,cespedOscuroSuperior, muralla,cespedOscuro, rellenoNegro;
+    public static BufferedImage jugador,cespedOscuroInferior,cespedOscuroSuperior, muralla,cespedOscuro, rellenoNegro,baldosapiso;
     
     public static void inicializar(){
         HojaSprites hoja = new HojaSprites(CargadorImagen.cargarImagen("/Utilidades/tileset.png"));
@@ -32,9 +32,16 @@ public class Recurso {
        cespedOscuro = hoja.ajustar(0, 0, ancho, alto);
        cespedOscuroSuperior = hoja.ajustar(ancho, 0, ancho, alto);
        cespedOscuroInferior  = hoja.ajustar((ancho * 2), 0, ancho, alto);
-       muralla = hoja.ajustar(ancho * 3, 0, ancho, alto);
+       muralla = hoja.ajustar((ancho * 3), 0, ancho, alto);
+       rellenoNegro = hoja.ajustar((ancho*4), 0, ancho, alto);
+       
+       baldosapiso = hoja.ajustar(ancho*8, 0, ancho, alto);
+       
        jugador  = hoja.ajustar(0, alto, ancho, alto);
-       rellenoNegro = hoja.ajustar(ancho*4, 0, ancho, alto);
-      //castillo = hoja.ajustar(x, y, ancho, alto);
+       
+       
+       
+       
+       //castillo = hoja.ajustar(x, y, ancho, alto);
     }
 }

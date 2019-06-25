@@ -20,10 +20,6 @@ import Interfaces.IAccionesB;
  * 
  * Clase que se encarga de setear las "baldosas" (piso,tablero,etc) para su uso en la interfaz grafica
  * 
- * @param arreglo de baldosas
- * @param objeto cesped oscuro
- * @param objeto cesced oscuro superior
- * @param objeto cesced oscuro inferior
  * 
  * @param ancho y alto de las baldosas
  * @param textura
@@ -40,7 +36,7 @@ public class Baldosa  implements IAccionesB{
     public static Baldosa cespedOscuroInferior = new BaldosaCespedOscuroInferior(2);
     public static Baldosa muralla = new BaldosaMuralla(3);  
     public static Baldosa rellenoNegro = new BaldosaRellenoNegro(4);
-    
+    public static Baldosa baldosapiso = new BaldosaPiso(8);
     public static final int ANCHO_BALDOSA = 32, ALTO_BALDOSA = 32;
     
     

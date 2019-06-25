@@ -3,11 +3,12 @@ package Pantallas;
 import Graficos.HojaSprites;
 import Graficos.Recurso;
 import Pantallas.Pantalla;
-import Tablero.Tablero;
 import Tablero.TableroJuego;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
+
+import Abstracta.Tablero;
 
 /**
  * 
