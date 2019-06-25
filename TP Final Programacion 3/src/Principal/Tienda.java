@@ -5,6 +5,7 @@ import java.awt.*;
 import Generica.Contenedor;
 import Interfaces.IAcciones;
 import Interfaces.IVendible;
+import Pantallas.Juego;
 
 /**
  * 
@@ -36,6 +37,7 @@ public class Tienda implements IAcciones,IVendible{
 	public static int anchoTienda = 8;
 	public static int tamanoBoton = 32;
 	public int espaciado = 2;
+	
 	public int posicionX = 280;
 	public int posicionY = 350;
 	
@@ -43,7 +45,6 @@ public class Tienda implements IAcciones,IVendible{
 	
 	
 	public Tienda() {
-		
 		listaAldea = new Contenedor<Aldea>();
         listaTorreta = new Contenedor<Torreta>();
  
@@ -60,6 +61,7 @@ public class Tienda implements IAcciones,IVendible{
 	 */
 	public void inicializarTienda() {
 		for(int i = 0; i < boton.length; i++ ) {
+			
 			boton[i] = new Rectangle (posicionX+((tamanoBoton+espaciado)*i),posicionY,tamanoBoton,tamanoBoton);
 	
 		}
@@ -90,6 +92,12 @@ public class Tienda implements IAcciones,IVendible{
 	public void renderizar(Graphics g) {
 	
 		for(int i = 0; i<boton.length; i++ ) {
+			
+			if(boton[i].contains(Juego.mse)) {
+				
+				g.setColor(new Color(255,255,255,100));
+				g.fillRect(boton[i].x, boton[i].y, boton[i].width, boton[i].height);
+			}
 			g.fillRect(boton[i].x, boton[i].y, boton[i].width, boton[i].height);
 		}
 	}

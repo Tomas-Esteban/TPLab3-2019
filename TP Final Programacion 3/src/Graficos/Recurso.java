@@ -34,10 +34,11 @@ public class Recurso {
        cespedOscuroInferior  = hoja.ajustar((ancho * 2), 0, ancho, alto);
        muralla = hoja.ajustar((ancho * 3), 0, ancho, alto);
        rellenoNegro = hoja.ajustar((ancho*4), 0, ancho, alto);
+       baldosapiso = hoja.ajustar(ancho*8, 0, ancho, alto);
        
-       castillo = hoja.ajustar(ancho*5, 10, ancho, alto);
        
-       baldosapiso = hoja.ajustar(ancho*7, 0, ancho, alto);
+       castillo= hoja.ajustar(0,4, ancho, alto);
+       
        jugador  = hoja.ajustar(0, alto, ancho, alto);
        
        // 5 torreta 6 perro zombie 7 heroe 8 piso 

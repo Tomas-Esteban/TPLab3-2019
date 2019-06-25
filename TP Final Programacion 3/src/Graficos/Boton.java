@@ -8,7 +8,7 @@ import Pantallas.Juego;
 
 import java.awt.*;
 
-public class Botones implements MouseMotionListener,MouseListener{
+public class Boton implements MouseMotionListener,MouseListener{
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
@@ -47,7 +47,7 @@ public class Botones implements MouseMotionListener,MouseListener{
 
 	@Override
 	public void mouseMoved(MouseEvent e) {
-		Juego.mse = new Point(e.getX()+ 800 ,e.getY()+ 600 );
+		Juego.mse = new Point(e.getX()- 800 ,e.getY()- 600 );
 		
 	}
 
