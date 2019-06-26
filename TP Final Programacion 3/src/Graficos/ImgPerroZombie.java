@@ -1,15 +1,12 @@
 package Graficos;
 
-import Interfaces.IAcciones;
 
-public class ImgPerroZombie extends ImgBaldosa implements IAcciones{
+
+public class ImgPerroZombie extends ImgBaldosa {
 	public ImgPerroZombie (int id) {
 		super(Recurso.perroZombie, id);
 	}
-	
-	private void tick() {
-		
-	}
+
 	/*private void render() {
 		bs = display.getCanvas().getBufferStrategy();
 		if(bs == null) {
