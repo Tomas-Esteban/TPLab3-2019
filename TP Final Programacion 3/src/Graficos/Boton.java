@@ -43,12 +43,12 @@ public class Boton implements MouseMotionListener,MouseListener{
 
 	@Override
 	public void mouseDragged(MouseEvent e) {
-		Juego.mse = new Point(e.getX()+ 800 ,e.getY()+ 600 );		
+		Juego.mse = new Point((e.getX()+ 800) ,(e.getY()+ 600) );		
 	}
 
 	@Override
 	public void mouseMoved(MouseEvent e) {
-		Juego.mse = new Point(e.getX()- 800 ,e.getY()- 600 );
+		Juego.mse = new Point((e.getX()- 800) ,(e.getY()- 600) );
 		
 	}
 

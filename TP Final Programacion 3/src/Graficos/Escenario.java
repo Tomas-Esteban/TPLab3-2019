@@ -46,14 +46,14 @@ public class Escenario implements IAcciones {
     public void renderizar(Graphics g){
         for(int y = 0; y < alto; y++)
             for(int x = 0; x < ancho; x++){
-                getBaldosa(x, y).renderizar(g, x * Baldosa.ANCHO_BALDOSA, y * Baldosa.ALTO_BALDOSA);
+                getBaldosa(x, y).renderizar(g, x * ImgBaldosa.ANCHO_BALDOSA, y * ImgBaldosa.ALTO_BALDOSA);
             }
     }
     
-    public Baldosa getBaldosa(int x, int y){
-        Baldosa b = Baldosa.baldosas[multiBaldosas[x][y]];
+    public ImgBaldosa getBaldosa(int x, int y){
+        ImgBaldosa b = ImgBaldosa.baldosas[multiBaldosas[x][y]];
         if(b == null)
-            return Baldosa.rellenoNegro;
+            return ImgBaldosa.rellenoNegro;
         return b;
     }
     private void cargarEscenario(String ruta){

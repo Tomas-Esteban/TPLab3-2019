@@ -2,6 +2,7 @@ package Principal;
 
 import java.awt.*;
 import Generica.Contenedor;
+import Graficos.Recurso;
 import Interfaces.IAcciones;
 import Interfaces.IVendible;
 import Pantallas.Juego;
@@ -41,7 +42,8 @@ public class Tienda implements IAcciones,IVendible{
 	private int posicionY = 350;
 	
 	private Rectangle[] boton = new Rectangle[anchoTienda];
-	
+	private Rectangle oro;
+	private Rectangle vida;
 	
 	public Tienda() {
 		listaAldea = new Contenedor<Aldea>();
@@ -60,10 +62,11 @@ public class Tienda implements IAcciones,IVendible{
 	 */
 	public void inicializarTienda() {
 		for(int i = 0; i < boton.length; i++ ) {
-			
 			boton[i] = new Rectangle (posicionX+((tamanoBoton+espaciado)*i),posicionY,tamanoBoton,tamanoBoton);
-	
 		}
+		oro = new Rectangle(200,350+(tamanoBoton+espaciado),tamanoBoton,tamanoBoton);
+		vida = new Rectangle(200,380+(tamanoBoton+espaciado),tamanoBoton,tamanoBoton);
+		
 	}
 	
 	public double getPrecioAldea() {
@@ -95,9 +98,13 @@ public class Tienda implements IAcciones,IVendible{
 			if(boton[i].contains(Juego.mse)) {
 				
 				g.setColor(new Color(255,255,255,150));
-				g.fillRect(boton[i].x, boton[i].y, boton[i].width, boton[i].height);
+				//g.fillRect(boton[i].x, boton[i].y, boton[i].width, boton[i].height);
 			}
-			//g.fillRect(boton[i].x, boton[i].y, boton[i].width, boton[i].height);
+			g.fillRect(boton[i].x, boton[i].y, boton[i].width, boton[i].height);
+			
+			//dibujando imagen oro y vida
+			g.drawImage(Recurso.icono[0],oro.x,oro.y,oro.width ,oro.height, null);
+			g.drawImage(Recurso.icono[1], vida.x,vida.y,vida.width,vida.height, null);
 		}
 	}
 

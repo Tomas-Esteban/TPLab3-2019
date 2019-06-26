@@ -1,14 +1,11 @@
 package Pantallas;
 
-import Graficos.HojaSprites;
 import Graficos.Recurso;
 import Pantallas.Pantalla;
 import Tablero.TableroJuego;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.image.BufferStrategy;
-import java.awt.image.BufferedImage;
-
 import Abstracta.Tablero;
 
 /**
@@ -48,9 +45,6 @@ public class Juego implements Runnable{
     //mouse
     public static Point mse = new  Point(0,0);
     
-    //temporal
-    private BufferedImage test;
-    private HojaSprites hoja;
     
     //Estados
     private Tablero estadoJuego;

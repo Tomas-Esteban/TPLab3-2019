@@ -21,17 +21,19 @@ import Interfaces.IAccionesB;
  * 
  */
 
-public class Baldosa  implements IAccionesB{
+public class ImgBaldosa  implements IAccionesB{
     
     // Staticas
-    public static Baldosa[] baldosas = new Baldosa[256];
-    public static Baldosa cespedOscuro = new BaldosaCespedOscuro(0);
-    public static Baldosa cespedOscuroSuperior = new BaldosaCespedOscuroSuperior(1);
-    public static Baldosa cespedOscuroInferior = new BaldosaCespedOscuroInferior(2);
-    public static Baldosa muralla = new BaldosaMuralla(3);  
-    public static Baldosa rellenoNegro = new BaldosaRellenoNegro(4);
-    public static Baldosa baldosapiso = new BaldosaPiso(8);
-    public static Baldosa baldosacastillo = new BaldosaCastillo(9);
+    public static ImgBaldosa[] baldosas = new ImgBaldosa[256];
+    public static ImgBaldosa cespedOscuro = new ImgBaldosaCespedOscuro(0);
+    public static ImgBaldosa cespedOscuroSuperior = new ImgBaldosaCespedOscuroSuperior(1);
+    public static ImgBaldosa cespedOscuroInferior = new ImgBaldosaCespedOscuroInferior(2);
+    public static ImgBaldosa muralla = new ImgBaldosaMuralla(3);  
+    public static ImgBaldosa rellenoNegro = new ImgBaldosaRellenoNegro(4);
+    public static ImgBaldosa baldosapiso = new ImgBaldosaPiso(8);
+    public static ImgBaldosa baldosacastillo = new ImgBaldosaCastillo(9);
+    public static ImgBaldosa baldosavida = new ImgVida(10);
+    public static ImgBaldosa baldosaoro = new ImgOro(11);
     
     public static final int ANCHO_BALDOSA = 32, ALTO_BALDOSA = 32;
     
@@ -39,7 +41,7 @@ public class Baldosa  implements IAccionesB{
     protected BufferedImage textura;
     protected final int id;
     
-    public Baldosa(BufferedImage textura, int id){
+    public ImgBaldosa(BufferedImage textura, int id){
         this.textura = textura;
         this.id = id;
         

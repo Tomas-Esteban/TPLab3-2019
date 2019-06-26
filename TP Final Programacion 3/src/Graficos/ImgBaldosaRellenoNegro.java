@@ -11,13 +11,13 @@ package Graficos;
  * Clase que permite crear un objeto baldosa de color negro que sirve como relleno. (clase hija que extiende de Baldosa)
  * <br> Presentacion sobre pilares de la POO by @author Benoffi7 </br>
  * @see <a href = "https://docs.google.com/presentation/d/1ln1p_6b44mKaHEJkfdimSZrOWz9hK5vg1FegjWzlkkg/edit#slide=id.g348419c47f_0_282" /> Herenecia en Java - PowerPoint</a>
- * @see  Graficos.Baldosa
+ * @see  Graficos.ImgBaldosa
  * 
  */
 
-public class BaldosaRellenoNegro extends Baldosa{
+public class ImgBaldosaRellenoNegro extends ImgBaldosa{
 	
-	public BaldosaRellenoNegro(int id) {
+	public ImgBaldosaRellenoNegro(int id) {
         super(Recurso.rellenoNegro, id);
     }
     
