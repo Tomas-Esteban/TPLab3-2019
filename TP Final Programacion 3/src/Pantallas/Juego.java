@@ -6,6 +6,9 @@ import Tablero.TableroJuego;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.image.BufferStrategy;
+
+import com.sun.prism.paint.Stop;
+
 import Abstracta.Tablero;
 
 /**
@@ -42,6 +45,7 @@ public class Juego implements Runnable{
     private BufferStrategy bs;
     private Graphics g;
     
+    private int movimientoPerroZombie = 800;
     //mouse
     public static Point mse = new  Point(0,0);
     
@@ -110,8 +114,11 @@ public class Juego implements Runnable{
     }
     
     private void actualizar(){
-        if(Tablero.getEstado() != null)
-            Tablero.getEstado().actualizar();
+    	if(movimientoPerroZombie > 100) {
+        movimientoPerroZombie -= 1;
+    	}
+    	
+    	
     }
     
     private void renderizar(){
@@ -129,7 +136,7 @@ public class Juego implements Runnable{
         
         if(Tablero.getEstado() != null)
             Tablero.getEstado().renderizar(g);
-        //g.drawImage(Recurso.cespedOscuro, 10, 10, null);
+        g.drawImage(Recurso.perroZombie, movimientoPerroZombie,150 , null);
 
         //g.drawImage(test, 0, 0, null);
         //g.drawImage(hoja.ajustar(64, 64, 32, 32), 5, 5, null);

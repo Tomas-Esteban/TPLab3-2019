@@ -25,7 +25,7 @@ import java.awt.image.BufferedImage;
 public class Recurso {
     
     private static final int ancho = 32, alto = 32;
-    public static BufferedImage imgoro,imgvida,jugador,cespedOscuroInferior,cespedOscuroSuperior, muralla,cespedOscuro, rellenoNegro,baldosapiso,castillo;
+    public static BufferedImage imgoro,imgvida,jugador,cespedOscuroInferior,cespedOscuroSuperior, muralla,cespedOscuro, rellenoNegro,baldosapiso,castillo,perroZombie;
     public static Image[] icono = new Image[100]; 
     
     public static void inicializar(){
@@ -38,7 +38,7 @@ public class Recurso {
        rellenoNegro = hoja.ajustar((ancho*4), 0, ancho, alto);
        baldosapiso = hoja.ajustar(ancho*8, 0, ancho, alto);
        castillo= hoja.ajustar(0,4, ancho, alto);
-       
+       perroZombie = hoja.ajustar((ancho * 6),0, ancho, alto);
        // 5 torreta 6 perro zombie 7 heroe 8 piso 
        
      
