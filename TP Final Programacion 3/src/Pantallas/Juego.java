@@ -32,11 +32,11 @@ import Abstracta.Tablero;
  * 
  */
 
-public class Juego implements Runnable {
+public class Juego implements Runnable{
     
     
-    public Pantalla ventana;
-    public int ancho, alto;
+    private Pantalla ventana;
+    private int ancho, alto;
     private String titulo;
     
     private boolean enEjecucion = false;
@@ -61,6 +61,7 @@ public class Juego implements Runnable {
         this.ancho = ancho;
         this.alto = alto;
         this.titulo = titulo;
+        
       
     }
     
@@ -155,6 +156,8 @@ public class Juego implements Runnable {
         enEjecucion = true;
         hilo = new Thread(this);
         hilo.start();
+        
+        
     }
     /**
      * Si la ejecucion no esta en ejecucion crea un hilo de ejecucion. 

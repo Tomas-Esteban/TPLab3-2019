@@ -24,7 +24,7 @@ public class Personaje implements IAcciones {
 	
 	
 	
-	private static double hp = 100;
+	public static double hp = 100;
 	private int posicionX;
 	private int posicionY;
 	private double dps;

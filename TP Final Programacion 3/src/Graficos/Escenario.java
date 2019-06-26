@@ -58,18 +58,6 @@ public class Escenario implements IAcciones {
     }
     private void cargarEscenario(String ruta){
         
-       /* ancho = 5;
-        alto = 5;
-        
-        multiBaldosas = new int [ancho][alto];
-        
-        for(int x = 0; x < ancho; x++){
-            for(int y = 0; y < alto; y++){
-                multiBaldosas[x][y] = 0;
-            }
-        }
-         */
-        
         String archivo = Utilidad.cargarArchivoComoString(ruta);
         String[] numeros = archivo.split("\\s+");
         ancho = Utilidad.analizarEntero(numeros[0]);

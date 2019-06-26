@@ -1,7 +1,6 @@
 package Principal;
 
 import java.awt.*;
-
 import Generica.Contenedor;
 import Interfaces.IAcciones;
 import Interfaces.IVendible;
@@ -34,14 +33,14 @@ public class Tienda implements IAcciones,IVendible{
 	/**
 	 * Atributos para poder cargar las imagenes a la interfaz grafica.
 	 */
-	public static int anchoTienda = 8;
-	public static int tamanoBoton = 32;
-	public int espaciado = 2;
+	private static int anchoTienda = 8;
+	private static int tamanoBoton = 32;
+	private int espaciado = 2;
 	
-	public int posicionX = 280;
-	public int posicionY = 350;
+	private int posicionX = 280;
+	private int posicionY = 350;
 	
-	public Rectangle[] boton = new Rectangle[anchoTienda];
+	private Rectangle[] boton = new Rectangle[anchoTienda];
 	
 	
 	public Tienda() {
@@ -95,10 +94,10 @@ public class Tienda implements IAcciones,IVendible{
 			
 			if(boton[i].contains(Juego.mse)) {
 				
-				g.setColor(new Color(255,255,255,100));
+				g.setColor(new Color(255,255,255,150));
 				g.fillRect(boton[i].x, boton[i].y, boton[i].width, boton[i].height);
 			}
-			g.fillRect(boton[i].x, boton[i].y, boton[i].width, boton[i].height);
+			//g.fillRect(boton[i].x, boton[i].y, boton[i].width, boton[i].height);
 		}
 	}
 

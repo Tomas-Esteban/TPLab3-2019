@@ -1,13 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Graficos;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
-
 import Interfaces.IAccionesB;
 
 /**
@@ -37,7 +31,6 @@ public class Baldosa  implements IAccionesB{
     public static Baldosa muralla = new BaldosaMuralla(3);  
     public static Baldosa rellenoNegro = new BaldosaRellenoNegro(4);
     public static Baldosa baldosapiso = new BaldosaPiso(8);
-    
     public static Baldosa baldosacastillo = new BaldosaCastillo(9);
     
     public static final int ANCHO_BALDOSA = 32, ALTO_BALDOSA = 32;

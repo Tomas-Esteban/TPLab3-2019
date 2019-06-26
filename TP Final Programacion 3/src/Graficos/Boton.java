@@ -10,6 +10,7 @@ import java.awt.*;
 
 public class Boton implements MouseMotionListener,MouseListener{
 
+	
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
