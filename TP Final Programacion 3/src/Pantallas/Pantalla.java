@@ -66,8 +66,8 @@ public class Pantalla {
         
   
         
-        //ventana.addMouseListener(new Boton());
-    	//ventana.addMouseMotionListener(new Boton());
+        ventana.addMouseListener(new Boton());
+    	ventana.addMouseMotionListener(new Boton());
     }
     
     public Canvas getCanvas(){

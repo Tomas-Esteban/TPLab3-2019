@@ -5,9 +5,16 @@
  */
 package Utilidades;
 
+import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.imageio.ImageIO;
+
+import Graficos.CargadorImagen;
 
  /** 
  * 
@@ -48,5 +55,15 @@ public class Utilidad {
             e.printStackTrace();
             return 0;
         }
+    }
+    public static BufferedImage cargarImagen(String ruta){
+        
+        try {
+            return ImageIO.read(Utilidad.class.getResource(ruta));
+        } catch (IOException ex) {
+            Logger.getLogger(Utilidad.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return null;
     }
 }

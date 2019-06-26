@@ -2,7 +2,7 @@ package Graficos;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
-import Interfaces.IAccionesB;
+import Interfaces.IAccionesPersonaje;
 
 /**
  * 
@@ -21,7 +21,7 @@ import Interfaces.IAccionesB;
  * 
  */
 
-public class ImgBaldosa  implements IAccionesB{
+public class ImgBaldosa  {
     
     // Staticas
     public static ImgBaldosa[] baldosas = new ImgBaldosa[256];
@@ -51,14 +51,8 @@ public class ImgBaldosa  implements IAccionesB{
     public boolean esSolido(){
         return false;
     }
-    
-
-    @Override
-    public void actualizar(){
-        
-    }
-    
-    @Override
+       
+  
     public void renderizar(Graphics g, int x, int y){
         g.drawImage(textura, x, y, ANCHO_BALDOSA, ALTO_BALDOSA, null);
     }

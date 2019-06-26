@@ -103,8 +103,10 @@ public class Tienda implements IAcciones,IVendible{
 			g.fillRect(boton[i].x, boton[i].y, boton[i].width, boton[i].height);
 			
 			//dibujando imagen oro y vida
-			g.drawImage(Recurso.icono[0],oro.x,oro.y,oro.width ,oro.height, null);
-			g.drawImage(Recurso.icono[1], vida.x,vida.y,vida.width,vida.height, null);
+			g.fillRect(oro.x,oro.y,oro.width ,oro.height);
+			g.fillRect( vida.x,vida.y,vida.width,vida.height);
+			//g.drawImage(Recurso.icono[0],oro.x,oro.y,oro.width ,oro.height, null);
+            //g.drawImage(Recurso.icono[1], vida.x,vida.y,vida.width,vida.height, null);
 		}
 	}
 

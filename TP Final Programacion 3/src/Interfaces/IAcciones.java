@@ -24,5 +24,5 @@ public interface IAcciones {
 	
 	public void renderizar(Graphics g);
 	
-	
+
 }

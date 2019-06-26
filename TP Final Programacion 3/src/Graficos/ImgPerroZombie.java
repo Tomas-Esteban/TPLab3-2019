@@ -1,6 +1,8 @@
 package Graficos;
 
-public class ImgPerroZombie extends ImgBaldosa{
+import Interfaces.IAcciones;
+
+public class ImgPerroZombie extends ImgBaldosa implements IAcciones{
 	public ImgPerroZombie (int id) {
 		super(Recurso.perroZombie, id);
 	}
@@ -8,7 +10,7 @@ public class ImgPerroZombie extends ImgBaldosa{
 	private void tick() {
 		
 	}
-	private void render() {
+	/*private void render() {
 		bs = display.getCanvas().getBufferStrategy();
 		if(bs == null) {
 			display.getCanvas().createBufferStrategy(3);
@@ -21,6 +23,6 @@ public class ImgPerroZombie extends ImgBaldosa{
 		g.drawImage(Assets.grass,10,10,null);
 		bs.show();
 		
-	}
+	}*/
 
 }

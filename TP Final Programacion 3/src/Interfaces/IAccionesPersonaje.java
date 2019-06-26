@@ -17,10 +17,12 @@ import java.awt.Graphics;
  * @see Interfaces.IAcciones Para mas informacion.
  *
  */
-public interface IAccionesB {
+public interface IAccionesPersonaje {
 	
 	
-	public void actualizar();
-	public void renderizar(Graphics g, int x, int y);
+	public void recibirDano(int cant);
+	public void morir();
+	public void atacar();
+	
 	
 }

@@ -1,8 +1,10 @@
-package Principal;
+package Utilidades;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import Principal.Usuario;
 
 public  class SistemaJuego {
 

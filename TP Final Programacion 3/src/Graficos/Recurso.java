@@ -8,6 +8,8 @@ package Graficos;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 
+import Utilidades.Utilidad;
+
 /**
  * 
  * @author ivanmdq22
@@ -29,7 +31,7 @@ public class Recurso {
     public static Image[] icono = new Image[100]; 
     
     public static void inicializar(){
-        HojaSprites hoja = new HojaSprites(CargadorImagen.cargarImagen("/Utilidades/tileset.png"));
+        HojaSprites hoja = new HojaSprites(Utilidad.cargarImagen("/Utilidades/tileset.png"));
         
        cespedOscuro = hoja.ajustar(0, 0, ancho, alto);
        cespedOscuroSuperior = hoja.ajustar(ancho, 0, ancho, alto);

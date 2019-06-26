@@ -1,6 +1,7 @@
 package Pantallas;
 
 import Graficos.Recurso;
+import Interfaces.IAcciones;
 import Pantallas.Pantalla;
 import Tablero.TableroJuego;
 import java.awt.Graphics;
@@ -32,12 +33,13 @@ import Abstracta.Tablero;
  * 
  */
 
-public class Juego implements Runnable{
+public class Juego implements Runnable, IAcciones{
     
     
     private Pantalla ventana;
     private int ancho, alto;
     private String titulo;
+    private int movimientoPerroZombie = 800;
     
     private boolean enEjecucion = false;
     private Thread hilo;
@@ -45,7 +47,7 @@ public class Juego implements Runnable{
     private BufferStrategy bs;
     private Graphics g;
     
-    private int movimientoPerroZombie = 800;
+    
     //mouse
     public static Point mse = new  Point(0,0);
     
@@ -58,10 +60,9 @@ public class Juego implements Runnable{
         
         this.ancho = ancho;
         this.alto = alto;
-        this.titulo = titulo;
-        
-      
+        this.titulo = titulo;  
     }
+    
     
     public void run(){
         
@@ -83,7 +84,7 @@ public class Juego implements Runnable{
             
             if(delta >=1){
                 actualizar();
-                renderizar();
+                renderizar(g);
                 actualizaciones ++;
                 delta--;
                 
@@ -93,12 +94,10 @@ public class Juego implements Runnable{
                 System.out.println("Actualizaciones y cuadros: " + actualizaciones);
                 actualizaciones = 0;
                 temporizador = 0;
-            }
-            
+            }   
         }
-        
-        
     }
+    
     
     private void inicializar(){
         
@@ -109,19 +108,17 @@ public class Juego implements Runnable{
           
           
           Tablero.setEstado(estadoJuego);
-        // test = CargadorImagen.cargarImagen("/Utilidades/bg.png");
-         // hoja = new HojaSprites(test);
     }
     
-    private void actualizar(){
+    @Override
+    public void actualizar(){
     	if(movimientoPerroZombie > 100) {
         movimientoPerroZombie -= 1;
-    	}
-    	
-    	
+    	}	
     }
     
-    private void renderizar(){
+    @Override
+    public void renderizar(Graphics g){
         
         bs = ventana.getCanvas().getBufferStrategy();
         
@@ -137,9 +134,6 @@ public class Juego implements Runnable{
         if(Tablero.getEstado() != null)
             Tablero.getEstado().renderizar(g);
         g.drawImage(Recurso.perroZombie, movimientoPerroZombie,150 , null);
-
-        //g.drawImage(test, 0, 0, null);
-        //g.drawImage(hoja.ajustar(64, 64, 32, 32), 5, 5, null);
         
         //terminar de dibujar
         bs.show();
@@ -174,4 +168,6 @@ public class Juego implements Runnable{
         }
     }
     
+    
+   
 }
