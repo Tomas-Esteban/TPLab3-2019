@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Graficos;
 
 import java.awt.image.BufferedImage;
@@ -28,6 +23,14 @@ public class HojaSprites {
         this.hoja = hoja;
     }
     
+    /**
+     * metodo que se encarga de ajustar nuestras imagenes en pixeles a nuestra pantalla de 800x600px.
+     * @param x
+     * @param y
+     * @param ancho
+     * @param alto
+     * @return nuestra hoja ajustada
+     */
     public BufferedImage ajustar(int x, int y, int ancho, int alto){
         
         return hoja.getSubimage(x, y, ancho, alto);

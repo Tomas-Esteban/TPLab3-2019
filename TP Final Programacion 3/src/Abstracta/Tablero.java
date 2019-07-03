@@ -39,6 +39,7 @@ public abstract class Tablero {
     public static void setEstado(Tablero estado){
         estadoActual = estado;
     }
+    
     public static Tablero getEstado(){
         return estadoActual;
     }

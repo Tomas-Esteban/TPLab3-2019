@@ -35,44 +35,36 @@ import Abstracta.Tablero;
 
 public class TableroJuego extends Tablero implements IAcciones{
 	
-	// el oro que va a tener nuestro usuario al comienzo del juego 
-	
-	private double oro;
-	
-	// faltaria un oro por segundo tambien
+	// el oro y la vida que va a tener nuestro usuario al comienzo del juego 
+	public static double oro = 100;
+	public static double vida = 100;
+
 	
     private Escenario escenario;
- 
     private Contenedor<Zombie>listazombie;
-	
 	private Tienda tienda;
 
 	
-    
     public TableroJuego(Juego juego){
         
     	super(juego);
-    	
         escenario = new Escenario("src/Utilidades/escenario1.txt");
-        
         listazombie = new Contenedor<Zombie>();
         tienda = new Tienda();
+        
     }
     
     @Override
     public void actualizar() {
         escenario.actualizar();
         tienda.actualizar();
-        listazombie.actualizar();
         
     }
 
     @Override
     public void renderizar(Graphics g) {
-        
         escenario.renderizar(g);
         tienda.renderizar(g);
-        listazombie.renderizar(g);
         
     }
 

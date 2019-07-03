@@ -7,7 +7,6 @@ package Graficos;
 
 import java.awt.Image;
 import java.awt.image.BufferedImage;
-
 import Utilidades.Utilidad;
 
 /**
@@ -30,6 +29,17 @@ public class Recurso {
     public static BufferedImage imgoro,imgvida,jugador,cespedOscuroInferior,cespedOscuroSuperior, muralla,cespedOscuro, rellenoNegro,baldosapiso,castillo,perroZombie;
     public static Image[] icono = new Image[100]; 
     
+    /**
+     * dado un sprite de imagenes este metodo incializa nuestras imagenes en pantalla, segun la posicion del sprite
+     * 0 cespedOscuro
+     * 1 cespedOscuroSuperior
+     * 2 cespedOscuroInferior
+     * 3 muralla
+     * 4 rellenoNegro para la tienda
+     * 8 baldosapiso
+     * 6 perroZombie
+     * 
+     */
     public static void inicializar(){
         HojaSprites hoja = new HojaSprites(Utilidad.cargarImagen("/Utilidades/tileset.png"));
         

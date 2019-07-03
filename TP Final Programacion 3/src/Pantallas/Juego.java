@@ -1,5 +1,6 @@
 package Pantallas;
 
+import Graficos.AccionBoton;
 import Graficos.Recurso;
 import Interfaces.IAcciones;
 import Pantallas.Pantalla;
@@ -7,9 +8,6 @@ import Tablero.TableroJuego;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.image.BufferStrategy;
-
-import com.sun.prism.paint.Stop;
-
 import Abstracta.Tablero;
 
 /**
@@ -20,25 +18,20 @@ import Abstracta.Tablero;
  * @since 10/05/2019
  * @version 1.6
  * 
- * Clase que se encarga de crear un objeto juego implementa la interfaz runnable para utilizar hilos
+ * Clase que se encarga de crear un objeto juego implementa la interfaz runnable  para utilizar hilos y IAcciones
+ * con el fin de renderizar las imagenes y actualizar el juego.
  * @see <a href = "https://www.youtube.com/watch?v=qXhc4wbDaqU&t=186s" /> Hilos en Java </a>
- * 
- * @param objeto pantalla
- * @param ancho y largo de pantalla
- * @param boolean de ejecucion
- * @param hilo
- * @param imagenes de sprites y hoja de sprites
- * @param objeto estado del juego
- * @param objeto estado del menu
+ * @see Interfaces.IAcciones
  * 
  */
 
 public class Juego implements Runnable, IAcciones{
-    
-    
-    private Pantalla ventana;
+	 
+	private Pantalla ventana;
     private int ancho, alto;
     private String titulo;
+    
+    // Zombie
     private int movimientoPerroZombie = 800;
     
     private boolean enEjecucion = false;
@@ -47,12 +40,10 @@ public class Juego implements Runnable, IAcciones{
     private BufferStrategy bs;
     private Graphics g;
     
+    // Mouse
+    public static Point mouse;
     
-    //mouse
-    public static Point mse = new  Point(0,0);
-    
-    
-    //Estados
+    // Estados
     private Tablero estadoJuego;
     private Tablero estadoMenu;
     
@@ -63,7 +54,9 @@ public class Juego implements Runnable, IAcciones{
         this.titulo = titulo;  
     }
     
-    
+    /**
+     * se encarga de ejecutar a cuantos cuadros por segundos corre nuestra aplicacion.
+     */
     public void run(){
         
         inicializar();
@@ -105,15 +98,19 @@ public class Juego implements Runnable, IAcciones{
           Recurso.inicializar();
           
           estadoJuego = new TableroJuego(this);
-          
-          
+          ventana.addMouseListener(new AccionBoton());
+  		  ventana.addMouseMotionListener(new AccionBoton());
+                   
           Tablero.setEstado(estadoJuego);
+          
+          
+          mouse = new  Point(0,0);
     }
     
     @Override
     public void actualizar(){
     	if(movimientoPerroZombie > 100) {
-        movimientoPerroZombie -= 1;
+    		movimientoPerroZombie -= 1;
     	}	
     }
     

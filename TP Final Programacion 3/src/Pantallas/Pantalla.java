@@ -2,11 +2,9 @@ package Pantallas;
 
 import java.awt.Canvas;
 import java.awt.Dimension;
-import java.awt.event.KeyListener;
-
 import javax.swing.JFrame;
+import Graficos.AccionBoton;
 
-import Graficos.Boton;
 
 /**
  * 
@@ -22,15 +20,18 @@ import Graficos.Boton;
  * 
  */
 
-public class Pantalla {
+public class Pantalla extends JFrame {
     
-    private JFrame ventana;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private JFrame ventana;
     private Canvas lienzo;
     
     private String titulo;
     private int ancho, alto;
-    
-    private Boton btn;
     
     public Pantalla(String titulo, int ancho, int alto){
         
@@ -52,8 +53,8 @@ public class Pantalla {
         ventana.setResizable(false);
         ventana.setLocationRelativeTo(null);
         ventana.setVisible(true);
-        ventana.addMouseListener(btn);
-        ventana.addMouseMotionListener(btn);
+        
+       
         
         
         lienzo = new Canvas();
@@ -65,13 +66,11 @@ public class Pantalla {
         ventana.pack();
         
   
-        
-        ventana.addMouseListener(new Boton());
-    	ventana.addMouseMotionListener(new Boton());
+        ventana.addMouseListener(new AccionBoton());
+    	ventana.addMouseMotionListener(new AccionBoton());
     }
     
     public Canvas getCanvas(){
-        
         return lienzo;
     }
     

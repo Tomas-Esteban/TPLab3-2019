@@ -50,18 +50,4 @@ public class JsonUtil {
 			return contenido;
 		}
 		
-		/*
-		public static void leerJSon() {
-			try {
-				
-				JSONArray arraye = new JSONArray(JsonUtil.leer());
-				
-				for(int i=0;i<arraye.length();i++) {
-					JSONObject jo = arraye.getJSONObject(i);
-				}
-				
-			}catch (JSONException e) {
-				e.printStackTrace();
-			}
-		}*/
 }

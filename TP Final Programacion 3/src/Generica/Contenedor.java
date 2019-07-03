@@ -1,9 +1,6 @@
 package Generica;
 
-import java.awt.Graphics;
 import java.util.HashMap;
-
-import Interfaces.IAcciones;
 
 /**
  * 
@@ -20,7 +17,7 @@ import Interfaces.IAcciones;
  * 
  */
 
-public class Contenedor<T1> implements IAcciones{
+public class Contenedor<T1> {
 
 	private HashMap<T1,Integer>listaContenedora;
 	
@@ -31,18 +28,5 @@ public class Contenedor<T1> implements IAcciones{
 	public void agregar(T1 t,int i) {
 		listaContenedora.put(t,i);
 	}
-	
-	@Override
-	public void actualizar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void renderizar(Graphics g) {
-		// TODO Auto-generated method stub
-		
-	}
-
 	
 }

@@ -3,13 +3,38 @@ package Graficos;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-
 import Pantallas.Juego;
-
 import java.awt.*;
 
-public class Boton implements MouseMotionListener,MouseListener{
+/**
+ * 
+ * @author ivanmdq22
+ * @author Pardo
+ * @author Nazuti.
+ * @since 10/05/2019
+ * @version 1.6
+ * 
+ * Clase encargada del manejo de acciones del boton.
+ *
+ */
+public class AccionBoton implements MouseMotionListener,MouseListener{
 
+	/**
+	 * metodo para saber si un mouse mantiene clickeado algo y lo arrastra.
+	 */
+	@Override
+	public void mouseDragged(MouseEvent e) {
+		Juego.mouse = new Point((e.getX()+ 800) ,(e.getY()+ 600) );		
+	}
+
+	/**
+	 * metodo para saber donde se esta moviendo el mouse.
+	 */
+	@Override
+	public void mouseMoved(MouseEvent e) {
+		Juego.mouse = new Point((e.getX()- 800) ,(e.getY()- 600) );
+		
+	}
 	
 	@Override
 	public void mouseClicked(MouseEvent e) {
@@ -40,16 +65,4 @@ public class Boton implements MouseMotionListener,MouseListener{
 		// TODO Auto-generated method stub
 		
 	}
-
-	@Override
-	public void mouseDragged(MouseEvent e) {
-		Juego.mse = new Point((e.getX()+ 800) ,(e.getY()+ 600) );		
-	}
-
-	@Override
-	public void mouseMoved(MouseEvent e) {
-		Juego.mse = new Point((e.getX()- 800) ,(e.getY()- 600) );
-		
-	}
-
 }

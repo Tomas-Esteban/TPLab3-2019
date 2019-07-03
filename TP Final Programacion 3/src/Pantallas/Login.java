@@ -5,9 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import org.json.JSONException;
-
 import Utilidades.SistemaJuego;
-
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import java.awt.event.ActionListener;

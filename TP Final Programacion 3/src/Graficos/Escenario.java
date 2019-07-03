@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Graficos;
 
 import Interfaces.IAcciones;
@@ -24,16 +19,14 @@ import java.awt.Graphics;
  * 
  */
 
-public class Escenario implements IAcciones {
+public class Escenario implements IAcciones{
     
 	private int ancho, alto;
     private int posicionX, posicionY;
     private int [][] multiBaldosas;
     
     public Escenario(String ruta){
-        
         cargarEscenario(ruta);
-        
         
     }
  
@@ -49,13 +42,23 @@ public class Escenario implements IAcciones {
                 getBaldosa(x, y).renderizar(g, x * ImgBaldosa.ANCHO_BALDOSA, y * ImgBaldosa.ALTO_BALDOSA);
             }
     }
-    
+    /**
+     * Metodo que se encarga de generar las baldosas negras de nuestra tienda
+     * @param x
+     * @param y
+     * @return BaldosaNegra
+     */
     public ImgBaldosa getBaldosa(int x, int y){
-        ImgBaldosa b = ImgBaldosa.baldosas[multiBaldosas[x][y]];
-        if(b == null)
+        ImgBaldosa baldosaNegra = ImgBaldosa.baldosas[multiBaldosas[x][y]];
+        if(baldosaNegra == null)
             return ImgBaldosa.rellenoNegro;
-        return b;
+        return baldosaNegra;
     }
+    
+    /**
+     * Metodo que se encarga de generar nuestras baldosas como si fuera mapa en la interfaz 
+     * @param ruta
+     */
     private void cargarEscenario(String ruta){
         
         String archivo = Utilidad.cargarArchivoComoString(ruta);

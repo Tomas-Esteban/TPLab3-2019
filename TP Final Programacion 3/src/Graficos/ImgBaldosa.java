@@ -2,7 +2,6 @@ package Graficos;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
-import Interfaces.IAccionesPersonaje;
 
 /**
  * 
@@ -34,6 +33,7 @@ public class ImgBaldosa  {
     public static ImgBaldosa baldosacastillo = new ImgBaldosaCastillo(9);
     public static ImgBaldosa baldosavida = new ImgVida(10);
     public static ImgBaldosa baldosaoro = new ImgOro(11);
+    
     
     public static final int ANCHO_BALDOSA = 32, ALTO_BALDOSA = 32;
     

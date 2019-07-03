@@ -3,18 +3,27 @@ package Utilidades;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import Principal.Usuario;
 
+/**
+ * 
+ * @author ivanmdq22
+ * @author Pardo
+ * @author Nazuti.
+ * @since 10/05/2019
+ * @version 1.6
+ * 
+ * Clase que se encarga de corroborar datos para la pantalla login.
+ *
+ */
 public  class SistemaJuego {
 
 	
 	/**
 	 * metodo que se encarga de saber si un usuario ya esta en el archivo o no.
 	 */
-	public static boolean comprobarUsuario (String usuario, String pass ) throws JSONException{
+	public static boolean comprobarUsuario (String usuario, String pass) throws JSONException{
 		boolean rta = false;
-		Usuario aux=null;
 		
 		try {
 			
@@ -23,10 +32,9 @@ public  class SistemaJuego {
 			for(int i=0;i<arraye.length();i++) {
 				
 				JSONObject jo = arraye.getJSONObject(i); 
-				aux = new Usuario(jo.getString("Contrasena"),jo.getString("nombre"));
-				
-				if(aux.getNombre().equals(usuario) && aux.getPassword().equals(pass)) {
-					return rta = true;
+				Usuario aux = new Usuario(jo.getString("Contrasena"),jo.getString("nombre"));
+				if(aux.getNombre().equals(usuario) && aux.getPassword().equals(pass)) { 
+					rta = true;
 				}
 			}
 		}catch (JSONException e) {e.printStackTrace();}
