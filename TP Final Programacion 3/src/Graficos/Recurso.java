@@ -26,7 +26,8 @@ import Utilidades.Utilidad;
 public class Recurso {
     
     private static final int ancho = 32, alto = 32;
-    public static BufferedImage pincho,aldea,torreta,imgheroe,imgoro,imgvida,cespedOscuroInferior,cespedOscuroSuperior, muralla,cespedOscuro, rellenoNegro,baldosapiso,castillo,perroZombie;
+    public static BufferedImage pincho,aldea,torreta,imgheroe,imgoro,imgvida,cespedOscuroInferior,cespedOscuroSuperior;
+    public static BufferedImage castillo,muralla,cespedOscuro, rellenoNegro,baldosapiso,perroZombie;
     public static Image[] icono = new Image[100]; 
     
     /**
@@ -49,18 +50,17 @@ public class Recurso {
        muralla = hoja.ajustar((ancho * 3), 0, ancho, alto);
        rellenoNegro = hoja.ajustar((ancho*4), 0, ancho, alto);
        baldosapiso = hoja.ajustar(ancho*8, 0, ancho, alto);
-       castillo= hoja.ajustar(0,4, ancho, alto);
        perroZombie = hoja.ajustar((ancho * 6),0, ancho, alto);
        
        icono[0]=imgheroe=hoja.ajustar((ancho*7),0, ancho, alto);
        icono[1]=torreta=hoja.ajustar(ancho*5, 0, ancho, alto);
-       
        icono[2]=aldea=hoja.ajustar((ancho*7),(alto*1), ancho, alto);
        icono[3]=pincho=hoja.ajustar((ancho*8),(alto*1), ancho, alto);
-       
        icono[5]=imgoro=hoja.ajustar((ancho*5),(alto*1), ancho, alto);
        icono[4]=imgvida=hoja.ajustar((ancho*6),(alto*1), ancho, alto); 
        
+       
+       castillo= hoja.ajustar(1,alto*1, ancho, alto);
      
     }
 }

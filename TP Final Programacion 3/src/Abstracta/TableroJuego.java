@@ -9,9 +9,12 @@ import Principal.Tienda;
 import Principal.Zombie;
 import Generica.Contenedor;
 import Graficos.Escenario;
+import Graficos.Recurso;
 import Interfaces.IAcciones;
 import Pantallas.Juego;
 import java.awt.Graphics;
+import java.awt.Rectangle;
+import java.awt.image.BufferedImage;
 
 /**
  * 
@@ -33,6 +36,8 @@ import java.awt.Graphics;
  */
 
 public class TableroJuego extends Tablero implements IAcciones{
+	
+	
 	
 	// el oro y la vida que va a tener nuestro usuario al comienzo del juego 
 	public static double oro = 100;
@@ -74,6 +79,8 @@ public class TableroJuego extends Tablero implements IAcciones{
     public void renderizar(Graphics g) {
         escenario.renderizar(g);
         tienda.renderizar(g);
+       
+        
         
     }
     

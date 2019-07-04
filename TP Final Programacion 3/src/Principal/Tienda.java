@@ -182,6 +182,8 @@ public class Tienda implements IAcciones,IVendible{
 				}
 			}
 		}if(tengoitem) {
+			// no puedo hacer andar el arreglo multidimensional, por lo tanto no puedo 
+			// colocar los items en la pantalla
 			if(TableroJuego.oro>=precioboton[itemid]) {
 				for(int y =0;y<Escenario.multiBaldosas.length;y++) {
 					for(int x=0;x<Escenario.multiBaldosas[0].length;x++) {
