@@ -20,12 +20,7 @@ import Graficos.AccionBoton;
  * 
  */
 
-public class Pantalla extends JFrame {
-    
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+public class Pantalla {
 	
 	private JFrame ventana;
     private Canvas lienzo;
@@ -45,8 +40,6 @@ public class Pantalla extends JFrame {
     
     public void crearVentana(){
         
-    	
-    	
         ventana = new JFrame(titulo);
         ventana.setSize(ancho, alto);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -54,20 +47,17 @@ public class Pantalla extends JFrame {
         ventana.setLocationRelativeTo(null);
         ventana.setVisible(true);
         
-       
-        
-        
         lienzo = new Canvas();
         lienzo.setPreferredSize(new Dimension(ancho, alto));
         lienzo.setMaximumSize(new Dimension(ancho, alto));
         lienzo.setMinimumSize(new Dimension(ancho, alto));
         
+        ventana.addMouseListener(new AccionBoton());
+    	ventana.addMouseMotionListener(new AccionBoton());
+        
         ventana.add(lienzo);
         ventana.pack();
         
-  
-        ventana.addMouseListener(new AccionBoton());
-    	ventana.addMouseMotionListener(new AccionBoton());
     }
     
     public Canvas getCanvas(){

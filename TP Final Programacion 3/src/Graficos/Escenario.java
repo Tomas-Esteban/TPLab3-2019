@@ -42,6 +42,7 @@ public class Escenario implements IAcciones{
                 getBaldosa(x, y).renderizar(g, x * ImgBaldosa.ANCHO_BALDOSA, y * ImgBaldosa.ALTO_BALDOSA);
             }
     }
+    
     /**
      * Metodo que se encarga de generar las baldosas negras de nuestra tienda
      * @param x

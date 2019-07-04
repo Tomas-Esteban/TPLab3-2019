@@ -38,7 +38,7 @@ public class AccionBoton implements MouseMotionListener,MouseListener{
 	
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
+		System.out.println("fff");
 		
 	}
 

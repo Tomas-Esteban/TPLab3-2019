@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Tablero;
+package Abstracta;
 
 import Principal.Tienda;
 import Principal.Zombie;
@@ -12,7 +12,6 @@ import Graficos.Escenario;
 import Interfaces.IAcciones;
 import Pantallas.Juego;
 import java.awt.Graphics;
-import Abstracta.Tablero;
 
 /**
  * 
@@ -58,6 +57,7 @@ public class TableroJuego extends Tablero implements IAcciones{
     public void actualizar() {
         escenario.actualizar();
         tienda.actualizar();
+        listazombie.actualizar();
         
     }
 

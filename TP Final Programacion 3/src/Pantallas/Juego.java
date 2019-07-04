@@ -1,14 +1,14 @@
 package Pantallas;
 
-import Graficos.AccionBoton;
 import Graficos.Recurso;
 import Interfaces.IAcciones;
 import Pantallas.Pantalla;
-import Tablero.TableroJuego;
+
 import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.image.BufferStrategy;
 import Abstracta.Tablero;
+import Abstracta.TableroJuego;
 
 /**
  * 
@@ -41,7 +41,7 @@ public class Juego implements Runnable, IAcciones{
     private Graphics g;
     
     // Mouse
-    public static Point mouse;
+    public static Point mouse = new Point(0,0);
     
     // Estados
     private Tablero estadoJuego;
@@ -98,13 +98,8 @@ public class Juego implements Runnable, IAcciones{
           Recurso.inicializar();
           
           estadoJuego = new TableroJuego(this);
-          ventana.addMouseListener(new AccionBoton());
-  		  ventana.addMouseMotionListener(new AccionBoton());
                    
           Tablero.setEstado(estadoJuego);
-          
-          
-          mouse = new  Point(0,0);
     }
     
     @Override

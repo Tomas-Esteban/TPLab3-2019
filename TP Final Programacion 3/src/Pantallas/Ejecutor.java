@@ -5,6 +5,8 @@
  */
 package Pantallas;
 
+import Excepcion.JuegoExcepcion;
+
 /**
  * 
  * @author ivanmdq22
@@ -25,12 +27,14 @@ public class Ejecutor {
 	
     public static void main(String[] args) {
         
-    	
-    	
-        Juego juego = new Juego("Towerdeefense", 800, 600);
-        juego.iniciar();
+    	/*Login login = new Login();
+    	if(login) {*/
+    		Juego juego = new Juego("Towerdeefense", 800, 600);
+            juego.iniciar();
+        /*}else{
+            throw new JuegoExcepcion("Error al inciar sesion");
+    	}*/
         
-        //Login l1 = new Login();
        
     }
     

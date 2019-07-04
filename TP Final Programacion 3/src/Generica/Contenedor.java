@@ -1,6 +1,9 @@
 package Generica;
 
+import java.awt.Graphics;
 import java.util.HashMap;
+
+import Interfaces.IAcciones;
 
 /**
  * 
@@ -13,11 +16,11 @@ import java.util.HashMap;
  * Clase contenedora generica instanciada con un hashmap para poder guardar
  * el precio de los articulos de la tienda.
  * @see Principal.Tienda para ver su implementacion.
- * @param <T1>
+ * @param <T1> contenedor HashMap, tendra precio y objeto (Zombie aldea torreta)
  * 
  */
 
-public class Contenedor<T1> {
+public class Contenedor<T1> implements IAcciones {
 
 	private HashMap<T1,Integer>listaContenedora;
 	
@@ -25,8 +28,28 @@ public class Contenedor<T1> {
 		listaContenedora = new HashMap<T1,Integer>();
 	}
 	
-	public void agregar(T1 t,int i) {
-		listaContenedora.put(t,i);
+	public void agregar(T1 param,int i) {
+		listaContenedora.put(param,i);
+	}
+
+	public void eliminar(T1 param) {
+		listaContenedora.remove(param);
+	}
+	
+	
+	/**
+	 * va actualizando (contando) la cantidad o descontando la cantidad en el contenedor.
+	 */
+	@Override
+	public void actualizar() {
+		
+	}
+
+	
+	@Override
+	public void renderizar(Graphics g) {
+	
+		
 	}
 	
 }

@@ -23,15 +23,16 @@ import java.awt.event.ActionEvent;
  *
  */
 public class Login {
-
+	
 	private JFrame frame;
 	private JTextField fieldUsuario;
 	private JTextField fieldpass;
-
+	
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				
@@ -39,6 +40,7 @@ public class Login {
 					
 					Login window = new Login();
 					window.frame.setVisible(true);
+					
 					
 				} catch (Exception e) {e.printStackTrace();}
 				
@@ -51,6 +53,7 @@ public class Login {
 	 */
 	public Login() {
 		initialize();
+		
 	}
 
 	/**
@@ -58,18 +61,20 @@ public class Login {
 	 */
 	private void initialize() {
 		
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame = new JFrame("BIENVENIDO A TOWER DEFENSE!");
+		frame.setBounds(150, 100, 450,450);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
+		
+		
 		fieldUsuario = new JTextField();
-		fieldUsuario.setBounds(149, 75, 124, 19);
+		fieldUsuario.setBounds(153, 75, 142, 20);
 		frame.getContentPane().add(fieldUsuario);
 		fieldUsuario.setColumns(10);
 		
 		fieldpass = new JTextField();
-		fieldpass.setBounds(149, 142, 124, 19);
+		fieldpass.setBounds(153, 142, 142, 20);
 		frame.getContentPane().add(fieldpass);
 		fieldpass.setColumns(10);
 		
@@ -86,7 +91,7 @@ public class Login {
 							bienvenido.setVisible(true);
 							bienvenido.setSize(800,600);
 							//SelNivel d1 = new SelNivel();
-							JOptionPane.showMessageDialog(bienvenido,"Bienvenido");
+							//JOptionPane.showMessageDialog(bienvenido,"Bienvenido");
 						
 						}else {
 						
@@ -95,7 +100,7 @@ public class Login {
 							error.setSize(800,600);
 							
 						
-							JOptionPane.showMessageDialog(error,"Error, que desea hacer?");
+							//JOptionPane.showMessageDialog(error,"Error, que desea hacer?");
 						
 							fieldUsuario.setText("");
 							fieldpass.setText("");
@@ -107,16 +112,18 @@ public class Login {
 			}
 		});
 		
+		
 		btnAceptar.setBounds(159, 211, 114, 25);
 		frame.getContentPane().add(btnAceptar);
 		
 		JLabel lblContrasea = new JLabel("Contraseña");
-		lblContrasea.setBounds(73, 144, 66, 15);
+		lblContrasea.setBounds(39, 144, 100, 15);
 		frame.getContentPane().add(lblContrasea);
 		
 		JLabel lblNombre = new JLabel("Nombre");
-		lblNombre.setBounds(73, 77, 66, 15);
+		lblNombre.setBounds(39, 77, 100, 15);
 		frame.getContentPane().add(lblNombre);
+		
 	}
 	
 	/**
@@ -134,4 +141,6 @@ public class Login {
 		return fieldpass.getText();
 	}
 	
+	
 }
+

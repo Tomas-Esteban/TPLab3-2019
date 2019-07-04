@@ -23,7 +23,8 @@ public class Heroe extends Personaje implements IVendible{
 	private boolean disponible;
 
 	public Heroe(float x, float y) {
-		
+		super();
+		disponible=true;
 	}
 	
 	public Heroe(int posicionX,int posicionY, double dps, double vdm, boolean disponible) {
