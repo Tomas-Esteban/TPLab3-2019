@@ -3,6 +3,8 @@ package Graficos;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+
+import Abstracta.TableroJuego;
 import Pantallas.Juego;
 import java.awt.*;
 
@@ -32,8 +34,8 @@ public class AccionBoton implements MouseMotionListener,MouseListener{
 	 */
 	@Override
 	public void mouseMoved(MouseEvent e) {
-		Juego.mouse = new Point((e.getX()- 800) ,(e.getY()- 600) );
-		
+		Juego.mouse = new Point((e.getX()) ,(e.getY()) );
+	
 	}
 	
 	@Override
@@ -44,8 +46,7 @@ public class AccionBoton implements MouseMotionListener,MouseListener{
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
+		TableroJuego.tienda.clickEnTienda(e.getButton()); 
 	}
 
 	@Override

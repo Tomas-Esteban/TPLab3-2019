@@ -5,7 +5,9 @@
  */
 package Pantallas;
 
+import Abstracta.TableroJuego;
 import Excepcion.JuegoExcepcion;
+import Principal.Zombie;
 
 /**
  * 
@@ -34,8 +36,21 @@ public class Ejecutor {
         /*}else{
             throw new JuegoExcepcion("Error al inciar sesion");
     	}*/
+            
+            
+        TableroJuego tablero = new TableroJuego(juego);
+        Zombie z1 = new Zombie();
+        Zombie z2 = new Zombie();
+        Zombie z3 = new Zombie();
+        Zombie z4 = new Zombie();
+        Zombie z5 = new Zombie();
+        tablero.agregarZombie(z1);
+        tablero.agregarZombie(z2);
+        tablero.agregarZombie(z3);
+        tablero.agregarZombie(z4);
+        tablero.agregarZombie(z5);
         
-       
+        
     }
     
    

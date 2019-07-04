@@ -26,7 +26,7 @@ import Utilidades.Utilidad;
 public class Recurso {
     
     private static final int ancho = 32, alto = 32;
-    public static BufferedImage imgoro,imgvida,jugador,cespedOscuroInferior,cespedOscuroSuperior, muralla,cespedOscuro, rellenoNegro,baldosapiso,castillo,perroZombie;
+    public static BufferedImage pincho,aldea,torreta,imgheroe,imgoro,imgvida,cespedOscuroInferior,cespedOscuroSuperior, muralla,cespedOscuro, rellenoNegro,baldosapiso,castillo,perroZombie;
     public static Image[] icono = new Image[100]; 
     
     /**
@@ -51,7 +51,14 @@ public class Recurso {
        baldosapiso = hoja.ajustar(ancho*8, 0, ancho, alto);
        castillo= hoja.ajustar(0,4, ancho, alto);
        perroZombie = hoja.ajustar((ancho * 6),0, ancho, alto);
-       // 5 torreta 6 perro zombie 7 heroe 8 piso 
+       
+       icono[0]=imgheroe=hoja.ajustar((ancho*7),0, ancho, alto);
+       icono[1]=torreta=hoja.ajustar(ancho*5, 0, ancho, alto);
+       //icono[2]=torreta=hoja.ajustar(ancho*5, 0, ancho, alto);
+       //icono[3]=torreta=hoja.ajustar(ancho*5, 0, ancho, alto);
+       
+       icono[4]=imgoro=hoja.ajustar((ancho*9), 0, ancho, alto);
+       icono[5]=imgvida=hoja.ajustar((ancho*10), 0, ancho, alto); 
        
      
     }

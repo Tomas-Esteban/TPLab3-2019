@@ -6,8 +6,10 @@ import java.awt.event.ActionListener;
 
 import Abstracta.TableroJuego;
 import Generica.Contenedor;
+import Graficos.Recurso;
 import Interfaces.IAcciones;
 import Interfaces.IVendible;
+import Pantallas.Juego;
 
 /**
  * 
@@ -23,7 +25,7 @@ import Interfaces.IVendible;
  *
  */
 
-public class Tienda implements IAcciones,IVendible,ActionListener{
+public class Tienda implements IAcciones,IVendible{
 
 	private Contenedor<Torreta>listaTorreta;
 	private Contenedor<Aldea>listaAldea;
@@ -33,11 +35,13 @@ public class Tienda implements IAcciones,IVendible,ActionListener{
 	/**
 	 * Atributos para poder cargar las imagenes a la interfaz grafica.
 	 */
-	private static int anchoTienda = 4;
+	private static int anchoTienda = 5;
 	private static int tamanoBoton = 50;
 	private static int espaciado = 4;
 	private static int posicionX = 280;
 	private static int posicionY = 350;
+	private static int itemid = -1;
+	private static boolean tengoitem = false;
 	
 	
 	private Rectangle[] boton = new Rectangle[anchoTienda];
@@ -66,6 +70,7 @@ public class Tienda implements IAcciones,IVendible,ActionListener{
 		boton[1] = new Rectangle (posicionX+((tamanoBoton+espaciado)*2),posicionY,tamanoBoton,tamanoBoton);
 		boton[2] = new Rectangle (posicionX+((tamanoBoton+espaciado)*3),posicionY,tamanoBoton,tamanoBoton);
 		boton[3] = new Rectangle (posicionX+((tamanoBoton+espaciado)*4),posicionY,tamanoBoton,tamanoBoton);
+		boton[4] = new Rectangle (posicionX+((tamanoBoton+espaciado)*4),posicionY,tamanoBoton,tamanoBoton);
 		
 		oro  = new Rectangle (140,350+tamanoBoton,tamanoBoton,tamanoBoton);
 		vida = new Rectangle (200,350+tamanoBoton,tamanoBoton,tamanoBoton);
@@ -98,20 +103,39 @@ public class Tienda implements IAcciones,IVendible,ActionListener{
 	 */
 	@Override
 	public void renderizar(Graphics g) {
-			
+		// creo los "botones" para las imagenes
 			g.fillRect(boton[0].x, boton[0].y, boton[0].width, boton[0].height);
 			g.fillRect(boton[1].x, boton[1].y, boton[1].width, boton[1].height);
 			g.fillRect(boton[2].x, boton[2].y, boton[2].width, boton[2].height);
 			g.fillRect(boton[3].x, boton[3].y, boton[3].width, boton[3].height);
+			g.fillRect(boton[4].x, boton[4].y, boton[4].width, boton[4].height);
 			
-			// nose porque no pasa por el if este como que no toma el mouse adentro de los botones
-			/*if(boton[i].contains(Juego.mouse)) {
+		// paso el cursor por los "botones" y cambia de color
+			if(boton[0].contains(Juego.mouse)) {
 				
 				g.setColor(new Color(255,255,255,150));
-				g.fillRect(boton[i].x, boton[i].y, boton[i].width, boton[i].height);
-			}*/
-			
-			
+				g.fillRect(boton[0].x, boton[0].y, boton[0].width, boton[0].height);
+			}
+			if(boton[1].contains(Juego.mouse)) {
+							
+				g.setColor(new Color(255,255,255,150));
+				g.fillRect(boton[1].x, boton[1].y, boton[1].width, boton[1].height);
+						}
+			if(boton[2].contains(Juego.mouse)) {
+				
+				g.setColor(new Color(255,255,255,150));
+				g.fillRect(boton[2].x, boton[2].y, boton[2].width, boton[2].height);
+			}
+			if(boton[3].contains(Juego.mouse)) {
+				
+				g.setColor(new Color(255,255,255,150));
+				g.fillRect(boton[3].x, boton[3].y, boton[3].width, boton[3].height);
+			}
+			if(boton[4].contains(Juego.mouse)) {
+				
+				g.setColor(new Color(255,255,255,150));
+				g.fillRect(boton[4].x, boton[4].y, boton[4].width, boton[4].height);
+			}
 			
 			//dibujando imagen oro y vida
 			g.fillRect(oro.x,oro.y,oro.width ,oro.height);
@@ -120,18 +144,38 @@ public class Tienda implements IAcciones,IVendible,ActionListener{
 			g.drawString(""+TableroJuego.vida, vida.x, vida.y);
 			
 			// necesito las imagenes 
-			//g.drawImage(Recurso.icono[0],oro.x,oro.y,oro.width ,oro.height, null);
-            //g.drawImage(Recurso.icono[1], vida.x,vida.y,vida.width,vida.height, null);
+			g.drawImage(Recurso.icono[0], boton[0].x, boton[0].y, boton[0].width, boton[0].height,null);
+			g.drawImage(Recurso.icono[1], boton[1].x, boton[1].y, boton[1].width, boton[1].height,null);
+			g.drawImage(Recurso.icono[2], boton[2].x, boton[2].y, boton[2].width, boton[2].height,null);
+			g.drawImage(Recurso.icono[3], boton[3].x, boton[3].y, boton[3].width, boton[3].height,null);
+			
+			g.drawImage(Recurso.icono[4],oro.x,oro.y,oro.width ,oro.height, null);
+            g.drawImage(Recurso.icono[5], vida.x,vida.y,vida.width,vida.height, null);
+            /*if(TableroJuego.oro>0) {
+            	g.drawString("",boton[itemid].x,boton[itemid].y);
+            }
+            */
+            if(tengoitem) {
+            	g.drawImage(Recurso.icono[itemid],Juego.mouse.x,Juego.mouse.y,boton[itemid].width,boton[itemid].height,null);
+            }
 	}
 
+	public int clickEnTienda(int mouse) {
+		int obj=0;
+		if(mouse == 1) {
+			for(int i = 0 ; i<boton.length;i++) {
+				if(boton[i].contains(Juego.mouse)) {
+					tengoitem = true;
+					itemid=i;
+					obj = itemid;
+				}
+			}
+		}
+		return obj;
+	}
 	@Override
 	public double getValor(Tienda t) {
 		return getValor(t);
-	}
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		
 	}
 	
 

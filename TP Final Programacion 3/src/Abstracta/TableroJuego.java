@@ -37,11 +37,12 @@ public class TableroJuego extends Tablero implements IAcciones{
 	// el oro y la vida que va a tener nuestro usuario al comienzo del juego 
 	public static double oro = 100;
 	public static double vida = 100;
-
 	
     private Escenario escenario;
     private Contenedor<Zombie>listazombie;
-	private Tienda tienda;
+	
+    // se usa estatico ya que lo llamamos en accionboton
+    public static Tienda tienda;
 
 	
     public TableroJuego(Juego juego){
@@ -51,6 +52,14 @@ public class TableroJuego extends Tablero implements IAcciones{
         listazombie = new Contenedor<Zombie>();
         tienda = new Tienda();
         
+    }
+    
+    public void agregarZombie(Zombie param) {
+    	listazombie.agregar(param,0);
+    }
+    
+    public void remueveZombie(Zombie param) {
+    	listazombie.eliminar(param);
     }
     
     @Override
@@ -67,6 +76,6 @@ public class TableroJuego extends Tablero implements IAcciones{
         tienda.renderizar(g);
         
     }
-
+    
     
 }

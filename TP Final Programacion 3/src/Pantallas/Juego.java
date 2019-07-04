@@ -3,7 +3,6 @@ package Pantallas;
 import Graficos.Recurso;
 import Interfaces.IAcciones;
 import Pantallas.Pantalla;
-
 import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.image.BufferStrategy;
@@ -32,7 +31,7 @@ public class Juego implements Runnable, IAcciones{
     private String titulo;
     
     // Zombie
-    private int movimientoPerroZombie = 800;
+    private int movimientoPerroZombie = 1000;
     
     private boolean enEjecucion = false;
     private Thread hilo;
@@ -105,8 +104,14 @@ public class Juego implements Runnable, IAcciones{
     @Override
     public void actualizar(){
     	if(movimientoPerroZombie > 100) {
+    		
     		movimientoPerroZombie -= 1;
-    	}	
+    		
+    	}if(movimientoPerroZombie == 100) {
+    		TableroJuego.vida=50;
+    	}
+    	
+    	
     }
     
     @Override
