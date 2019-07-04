@@ -3,6 +3,8 @@ package Pantallas;
 import java.awt.Canvas;
 import java.awt.Dimension;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 import Graficos.AccionBoton;
 
 
@@ -24,7 +26,7 @@ public class Pantalla {
 	
 	private JFrame ventana;
     private Canvas lienzo;
-    
+    private JPanel panel;
     private String titulo;
     private int ancho, alto;
     
@@ -47,15 +49,18 @@ public class Pantalla {
         ventana.setLocationRelativeTo(null);
         ventana.setVisible(true);
         
+        panel = new JPanel();
+        ventana.getContentPane().add(panel);
+        
         lienzo = new Canvas();
         lienzo.setPreferredSize(new Dimension(ancho, alto));
         lienzo.setMaximumSize(new Dimension(ancho, alto));
         lienzo.setMinimumSize(new Dimension(ancho, alto));
         
-        ventana.addMouseListener(new AccionBoton());
-    	ventana.addMouseMotionListener(new AccionBoton());
+        lienzo.addMouseListener(new AccionBoton());
+    	lienzo.addMouseMotionListener(new AccionBoton());
         
-        ventana.add(lienzo);
+        panel.add(lienzo);
         ventana.pack();
         
     }
