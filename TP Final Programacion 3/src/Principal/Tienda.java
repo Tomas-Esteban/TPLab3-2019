@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 import Abstracta.TableroJuego;
 import Generica.Contenedor;
+import Graficos.Escenario;
 import Graficos.Recurso;
 import Interfaces.IAcciones;
 import Interfaces.IVendible;
@@ -45,13 +46,13 @@ public class Tienda implements IAcciones,IVendible{
 	
 	
 	private Rectangle[] boton = new Rectangle[anchoTienda];
+	private static int precioboton[]= {50,20,20,15};
 	private Rectangle oro;
 	private Rectangle vida;
 	
 	private Graphics g;
 	
 	public Tienda() {
-		
 		listaAldea = new Contenedor<Aldea>();
         listaTorreta = new Contenedor<Torreta>();
  
@@ -70,7 +71,7 @@ public class Tienda implements IAcciones,IVendible{
 		boton[1] = new Rectangle (posicionX+((tamanoBoton+espaciado)*2),posicionY,tamanoBoton,tamanoBoton);
 		boton[2] = new Rectangle (posicionX+((tamanoBoton+espaciado)*3),posicionY,tamanoBoton,tamanoBoton);
 		boton[3] = new Rectangle (posicionX+((tamanoBoton+espaciado)*4),posicionY,tamanoBoton,tamanoBoton);
-		boton[4] = new Rectangle (posicionX+((tamanoBoton+espaciado)*4),posicionY,tamanoBoton,tamanoBoton);
+		boton[4] = new Rectangle (posicionX+((tamanoBoton+espaciado)*5),posicionY,tamanoBoton,tamanoBoton);
 		
 		oro  = new Rectangle (140,350+tamanoBoton,tamanoBoton,tamanoBoton);
 		vida = new Rectangle (200,350+tamanoBoton,tamanoBoton,tamanoBoton);
@@ -104,11 +105,35 @@ public class Tienda implements IAcciones,IVendible{
 	@Override
 	public void renderizar(Graphics g) {
 		// creo los "botones" para las imagenes
+			
 			g.fillRect(boton[0].x, boton[0].y, boton[0].width, boton[0].height);
 			g.fillRect(boton[1].x, boton[1].y, boton[1].width, boton[1].height);
 			g.fillRect(boton[2].x, boton[2].y, boton[2].width, boton[2].height);
 			g.fillRect(boton[3].x, boton[3].y, boton[3].width, boton[3].height);
 			g.fillRect(boton[4].x, boton[4].y, boton[4].width, boton[4].height);
+			
+			g.setColor(new Color(255,255,255));
+			g.setFont(new Font(Font.SANS_SERIF,14,14));
+			
+			g.drawImage(Recurso.icono[0], boton[0].x, boton[0].y, boton[0].width, boton[0].height,null);
+    		g.drawString(getPrecioHeroe()+"",boton[0].x,boton[0].y);
+			
+    		g.drawImage(Recurso.icono[1], boton[1].x, boton[1].y, boton[1].width, boton[1].height,null);
+			g.drawString(getPrecioTorreta()+"",boton[1].x,boton[1].y);
+			
+			g.drawImage(Recurso.icono[2], boton[2].x, boton[2].y, boton[2].width, boton[2].height,null);
+			g.drawString(getPrecioAldea()+"",boton[2].x,boton[2].y);
+			
+			g.drawImage(Recurso.icono[3], boton[3].x, boton[3].y, boton[3].width, boton[3].height,null);
+			g.drawString(getPrecioPinchos()+"",boton[3].x,boton[3].y);
+			
+			g.fillRect(oro.x,oro.y,oro.width ,oro.height);
+			g.drawImage(Recurso.icono[4],oro.x,oro.y,oro.width ,oro.height, null);
+			g.drawString(""+TableroJuego.oro, oro.x, oro.y);
+			
+			g.fillRect(vida.x,vida.y,vida.width,vida.height);
+			g.drawImage(Recurso.icono[5], vida.x,vida.y,vida.width,vida.height, null);
+			g.drawString(TableroJuego.vida+"", vida.x, vida.y);
 			
 		// paso el cursor por los "botones" y cambia de color
 			if(boton[0].contains(Juego.mouse)) {
@@ -137,31 +162,17 @@ public class Tienda implements IAcciones,IVendible{
 				g.fillRect(boton[4].x, boton[4].y, boton[4].width, boton[4].height);
 			}
 			
-			//dibujando imagen oro y vida
-			g.fillRect(oro.x,oro.y,oro.width ,oro.height);
-			g.fillRect( vida.x,vida.y,vida.width,vida.height);
-			g.drawString(""+TableroJuego.oro, oro.x, oro.y);
-			g.drawString(""+TableroJuego.vida, vida.x, vida.y);
 			
-			// necesito las imagenes 
-			g.drawImage(Recurso.icono[0], boton[0].x, boton[0].y, boton[0].width, boton[0].height,null);
-			g.drawImage(Recurso.icono[1], boton[1].x, boton[1].y, boton[1].width, boton[1].height,null);
-			g.drawImage(Recurso.icono[2], boton[2].x, boton[2].y, boton[2].width, boton[2].height,null);
-			g.drawImage(Recurso.icono[3], boton[3].x, boton[3].y, boton[3].width, boton[3].height,null);
-			
-			g.drawImage(Recurso.icono[4],oro.x,oro.y,oro.width ,oro.height, null);
-            g.drawImage(Recurso.icono[5], vida.x,vida.y,vida.width,vida.height, null);
-            /*if(TableroJuego.oro>0) {
-            	g.drawString("",boton[itemid].x,boton[itemid].y);
-            }
-            */
+            // checkea si tengo el clickeo que item y lo atrapo con el mouse
             if(tengoitem) {
             	g.drawImage(Recurso.icono[itemid],Juego.mouse.x,Juego.mouse.y,boton[itemid].width,boton[itemid].height,null);
             }
+        
 	}
 
 	public int clickEnTienda(int mouse) {
 		int obj=0;
+		// uno cuando se clickea!!
 		if(mouse == 1) {
 			for(int i = 0 ; i<boton.length;i++) {
 				if(boton[i].contains(Juego.mouse)) {
@@ -170,9 +181,20 @@ public class Tienda implements IAcciones,IVendible{
 					obj = itemid;
 				}
 			}
+		}if(tengoitem) {
+			if(TableroJuego.oro>=precioboton[itemid]) {
+				for(int y =0;y<Escenario.multiBaldosas.length;y++) {
+					for(int x=0;x<Escenario.multiBaldosas[0].length;x++) {
+						
+					}
+				}
+			}
 		}
 		return obj;
 	}
+	
+	
+	
 	@Override
 	public double getValor(Tienda t) {
 		return getValor(t);

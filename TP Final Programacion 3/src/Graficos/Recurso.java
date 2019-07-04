@@ -54,11 +54,12 @@ public class Recurso {
        
        icono[0]=imgheroe=hoja.ajustar((ancho*7),0, ancho, alto);
        icono[1]=torreta=hoja.ajustar(ancho*5, 0, ancho, alto);
-       //icono[2]=torreta=hoja.ajustar(ancho*5, 0, ancho, alto);
-       //icono[3]=torreta=hoja.ajustar(ancho*5, 0, ancho, alto);
        
-       icono[4]=imgoro=hoja.ajustar((ancho*9), 0, ancho, alto);
-       icono[5]=imgvida=hoja.ajustar((ancho*10), 0, ancho, alto); 
+       icono[2]=aldea=hoja.ajustar((ancho*7),(alto*1), ancho, alto);
+       icono[3]=pincho=hoja.ajustar((ancho*8),(alto*1), ancho, alto);
+       
+       icono[5]=imgoro=hoja.ajustar((ancho*5),(alto*1), ancho, alto);
+       icono[4]=imgvida=hoja.ajustar((ancho*6),(alto*1), ancho, alto); 
        
      
     }

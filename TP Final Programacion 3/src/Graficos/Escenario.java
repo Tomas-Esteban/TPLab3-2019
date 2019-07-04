@@ -23,7 +23,7 @@ public class Escenario implements IAcciones{
     
 	private int ancho, alto;
     private int posicionX, posicionY;
-    private int [][] multiBaldosas;
+    public static int [][] multiBaldosas;
     
     public Escenario(String ruta){
         cargarEscenario(ruta);
