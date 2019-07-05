@@ -25,9 +25,10 @@ public class Personaje implements IAcciones {
 	
 	
 	public static double hp = 100;
+	public static boolean vivo ;
 	private int posicionX;
 	private int posicionY;
-	private double dps;
+	private double dps = 20;
 	private double vdm;
 	
 	
@@ -35,6 +36,7 @@ public class Personaje implements IAcciones {
 	public Personaje(int posicionX, int posicionY, double dps, double vdm) {
 		this.posicionX = posicionX;
 		this.posicionY = posicionY;
+		this.vivo = true;
 		this.dps = dps;
 		this.vdm = vdm;
 	}
@@ -75,6 +77,7 @@ public class Personaje implements IAcciones {
 	public void setVdm(double vdm) {
 		this.vdm = vdm;
 	}
+	
 
 	@Override
 	public void actualizar() {

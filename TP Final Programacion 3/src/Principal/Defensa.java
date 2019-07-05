@@ -22,12 +22,23 @@ import Interfaces.IAcciones;
 
 public class Defensa implements IAcciones{
 	
+	public static boolean vivo;
 	private double hp;
-	private double dps;
+	private double dps = 20;
 	private int posicionX;
 	private int posicionY;
 	
 	
+	public Defensa() {
+		
+	}
+	public Defensa(double hp, double dps, int posicionX, int posicionY) {
+		Defensa.vivo = true;
+		this.hp = hp;
+		this.dps = dps;
+		this.posicionX = posicionX;
+		this.posicionY = posicionY;
+	}
 	public double getHp() {
 		return hp;
 	}

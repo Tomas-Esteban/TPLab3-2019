@@ -1,7 +1,9 @@
 package Principal;
 
+import Abstracta.TableroJuego;
+import Interfaces.IAccionesPersonaje;
 
- /** 
+/** 
  * 
  * @author ivanmdq22
  * @author Pardo
@@ -16,13 +18,14 @@ package Principal;
  * 
  */
 
-public class Zombie extends Personaje{
+public class Zombie extends Personaje implements IAccionesPersonaje{
 
 	private double oro;
-
+	
 	
 	public Zombie(int posicionX, int posicionY, double dps, double vdm, double oro) {
 		super(posicionX,posicionY, dps, vdm);
+		Personaje.vivo = true;
 		this.oro = oro;
 	}
 	
@@ -38,6 +41,26 @@ public class Zombie extends Personaje{
 	public void setOro(double oro) {
 		this.oro = oro;
 	}
+
+	@Override
+	public void recibirDano(double cant) {
+		super.hp = hp - cant;
+	}
+
+	@Override
+	public boolean morir() {
+		super.vivo = false;
+		TableroJuego.oro += getOro();
+		return vivo;
+	}
+
+	@Override
+	public double atacar() {
+		return getDps();
+		
+	}
+
+	
 	
 	
 	

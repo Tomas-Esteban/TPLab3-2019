@@ -6,6 +6,7 @@
 package Abstracta;
 
 import Principal.Tienda;
+import Principal.Torreta;
 import Principal.Zombie;
 import Generica.Contenedor;
 import Graficos.Escenario;
@@ -45,6 +46,7 @@ public class TableroJuego extends Tablero implements IAcciones{
 	
     private Escenario escenario;
     private Contenedor<Zombie>listazombie;
+    private Contenedor<Torreta>listaTorreta;
 	
     // se usa estatico ya que lo llamamos en accionboton
     public static Tienda tienda;
@@ -55,6 +57,7 @@ public class TableroJuego extends Tablero implements IAcciones{
     	super(juego);
         escenario = new Escenario("src/Utilidades/escenario1.txt");
         listazombie = new Contenedor<Zombie>();
+        listaTorreta = new Contenedor<Torreta>();
         tienda = new Tienda();
         
     }
@@ -65,6 +68,12 @@ public class TableroJuego extends Tablero implements IAcciones{
     
     public void remueveZombie(Zombie param) {
     	listazombie.eliminar(param);
+    }
+    public void agregarTorreta(Torreta param) {
+    	listaTorreta.agregar(param, 0);
+    }
+    public void remueveTorreta(Torreta param) {
+    	listaTorreta.agregar(param, 0);
     }
     
     @Override

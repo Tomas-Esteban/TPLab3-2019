@@ -3,6 +3,7 @@ package Principal;
 import java.awt.Graphics;
 
 import Interfaces.IAcciones;
+import Interfaces.IAccionesPersonaje;
 import Interfaces.IVendible;
  /** 
  * 
@@ -23,14 +24,17 @@ import Interfaces.IVendible;
  * 
  */
 
-public class Torreta extends Defensa implements IVendible,IAcciones{
+public class Torreta extends Defensa implements IVendible,IAcciones,IAccionesPersonaje{
 
 	
-	public  Torreta() {
+	public Torreta() {
 		super();
 	}
-	
 
+
+	public Torreta(double hp, double dps, int posicionX, int posicionY) {
+		super(hp, dps, posicionX, posicionY);
+	}
 
 	@Override
 	public double getValor(Tienda t) {
@@ -45,6 +49,29 @@ public class Torreta extends Defensa implements IVendible,IAcciones{
 	@Override
 	public void renderizar(Graphics g) {
 		super.renderizar(g);
+	}
+
+
+
+	@Override
+	public void recibirDano(double cant) {
+		double hp = getHp() - cant;
+		setHp(hp);
+	}
+
+
+
+	@Override
+	public boolean morir() {
+		super.vivo = false;
+		return vivo;
+	}
+
+
+
+	@Override
+	public double atacar() {
+		return getDps();
 	}
 	
 }

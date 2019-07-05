@@ -18,9 +18,9 @@ package Interfaces;
 public interface IAccionesPersonaje {
 	
 	
-	public void recibirDano(int cant);
-	public void morir();
-	public void atacar();
+	public void recibirDano(double cant);
+	public boolean morir();
+	public double atacar();
 	
 	
 }
