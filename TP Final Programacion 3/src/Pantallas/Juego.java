@@ -9,6 +9,10 @@ import Principal.Zombie;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.image.BufferStrategy;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 import Abstracta.Tablero;
 import Abstracta.TableroJuego;
 import Generica.Contenedor;
@@ -35,14 +39,18 @@ public class Juego implements Runnable, IAcciones{
     private String titulo;
     private int flag =0;
     // Torreta
-    private int torretaFija = 100;
-    private int posTorretaFija = 120;
-    private Torreta torre = new Torreta();
+    private static int torretaFija = 100;
+    private static int posTorretaFija = 120;
+    private Torreta torre;
     // Zombie
+    
     private int movimientoPerroZombie = 1000;
-    private Zombie perroZombie = new Zombie(150,movimientoPerroZombie,20,10,200);
+    
+    private Zombie perroZombie;
     private Contenedor<Zombie>listazombie;
+    
     private boolean enEjecucion = false;
+    
     private Thread hilo;
     
     private BufferStrategy bs;
@@ -56,8 +64,9 @@ public class Juego implements Runnable, IAcciones{
     private Tablero estadoMenu;
     
     public Juego(String titulo, int ancho, int alto){
-        
-        this.ancho = ancho;
+    	perroZombie = new Zombie(150,movimientoPerroZombie,20,10,200);
+    	torre = new Torreta();
+    	this.ancho = ancho;
         this.alto = alto;
         this.titulo = titulo;  
     }
@@ -110,47 +119,53 @@ public class Juego implements Runnable, IAcciones{
           Tablero.setEstado(estadoJuego);
          // agregarAlista(perroZombie);
     }
-    private void agregarAlista(Zombie perroZombie) {
-    	for(int i=0; i<5; i++) {
-    	listazombie.agregar(perroZombie, i);
-    	}
-    }
+
     @Override
     public void actualizar(){
-    	
-    	if(movimientoPerroZombie >posTorretaFija) {
-    		movimientoPerroZombie -= 1;
-    	}
-    	if(movimientoPerroZombie <= posTorretaFija + 50 && perroZombie.vivo == true) {
-    		flag =1;
-    		while(perroZombie.hp > 0) {
-    			TableroJuego.vida=50;
-    			double dpsZ = perroZombie.atacar();
-    			double dpsT = torre.atacar();
-    			torre.recibirDano(dpsZ);
-    			perroZombie.recibirDano(dpsT);
-    		}
-    		if(flag == 1) {
-    			perroZombie.morir();
-    			//listazombie.eliminar(perroZombie);
-    			flag ++;
-    		}
-    	
-    		
-    	}	
-    	if(movimientoPerroZombie >= posTorretaFija) {
+    	double dpsZ =0;
+    	double dpsT =0;
+    	 if(movimientoPerroZombie >posTorretaFija) {
+             movimientoPerroZombie -= 1;
+         }
+         if(movimientoPerroZombie <= posTorretaFija + 50 && perroZombie.vivo == true) {
+             flag =1;
+             dpsT = torre.atacar();
+             
+             while(perroZombie.hp > 0) {
+                 perroZombie.recibirDano(dpsT);
+                 System.out.println(perroZombie.hp);
+             }
+             
+             if(flag == 1 && perroZombie.hp == 0) {
+                 perroZombie.morir();
+                 //listazombie.eliminar(perroZombie);
+                 flag ++;
+             }
+
+         }
+         else if(movimientoPerroZombie == posTorretaFija && torre.vivo == true ) {
+             flag =1;
+             dpsZ = perroZombie.atacar();
+             while(torre.getHp() > 0) {
+                 torre.recibirDano(dpsZ);
+                 System.out.println(torre.getHp());
+             }
+             if(flag == 1) {
+                 torre.morir();
+                 //listazombie.eliminar(perroZombie);
+                 flag ++;
+             }
+             TableroJuego.vida-=dpsZ;
+         }
     		
     		if(torre.getHp()<= 0) {
-    			//perdes 
+    			JFrame bienvenido = new JFrame("PERDISTE");
     			
     		}
     		else if (perroZombie.hp <= 0){
-    			//ganas
+    			JFrame bienvenido = new JFrame("GANASTE");
     			
     		}
-    		
-    		
-    	}
     	
     	
     }
@@ -170,18 +185,19 @@ public class Juego implements Runnable, IAcciones{
         //dIBUJAR
         
         
-        if(Tablero.getEstado() != null)
-            Tablero.getEstado().renderizar(g);
+        if(Tablero.getEstado() != null) {
+        	Tablero.getEstado().renderizar(g);
+        }
         
-        g.drawImage(Recurso.torreta, torretaFija,150 , null);
-       // System.out.println(perroZombie.vivo);
-        if(perroZombie.vivo == true) {
-        g.drawImage(Recurso.perroZombie, movimientoPerroZombie,150 , null);
+        //dibujo torreta
+    	g.drawImage(Recurso.torreta, torretaFija,150 , null);
+        
+    	if(perroZombie.vivo == true) {
+        	//dibujo zombie
+        	g.drawImage(Recurso.perroZombie, movimientoPerroZombie,150 , null);
         }
-        if(torre.getHp() >0) {   
-        g.drawImage(Recurso.torreta, torretaFija,150 , null);
-        }
-        //terminar de dibujar
+        
+    	//terminar de dibujar
         bs.show();
         g.dispose();
     }

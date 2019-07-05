@@ -34,6 +34,7 @@ public class Torreta extends Defensa implements IVendible,IAcciones,IAccionesPer
 
 	public Torreta(double hp, double dps, int posicionX, int posicionY) {
 		super(hp, dps, posicionX, posicionY);
+		Defensa.vivo = true;
 	}
 
 	@Override
@@ -51,23 +52,17 @@ public class Torreta extends Defensa implements IVendible,IAcciones,IAccionesPer
 		super.renderizar(g);
 	}
 
-
-
 	@Override
 	public void recibirDano(double cant) {
 		double hp = getHp() - cant;
 		setHp(hp);
 	}
 
-
-
 	@Override
 	public boolean morir() {
 		super.vivo = false;
 		return vivo;
 	}
-
-
 
 	@Override
 	public double atacar() {

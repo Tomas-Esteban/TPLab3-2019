@@ -46,7 +46,6 @@ public class Tienda implements IAcciones,IVendible{
 	
 	
 	private Rectangle[] boton = new Rectangle[anchoTienda];
-	private static int precioboton[]= {50,20,20,15};
 	private Rectangle oro;
 	private Rectangle vida;
 	
@@ -181,19 +180,21 @@ public class Tienda implements IAcciones,IVendible{
 					obj = itemid;
 				}
 			}
-		}if(tengoitem) {
+		}/*if(tengoitem) {
 			// no puedo hacer andar el arreglo multidimensional, por lo tanto no puedo 
 			// colocar los items en la pantalla
 			if(TableroJuego.oro>=precioboton[itemid]) {
 				for(int y =0;y<Escenario.multiBaldosas.length;y++) {
 					for(int x=0;x<Escenario.multiBaldosas[0].length;x++) {
 						
+							
 					}
 				}
 			}
-		}
+		}*/
+	
 		return obj;
-	}
+}
 	
 	
 	
